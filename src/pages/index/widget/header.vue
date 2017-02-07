@@ -13,8 +13,6 @@
     </div>
 </template>
 <script>
-import {mapActions} from 'vuex';
-
 export default {
     name:'c-header',
     data(){
@@ -23,12 +21,6 @@ export default {
         }
     },
     methods:{
-        ...mapActions({
-            fToggleSideBar:'fToggleSideBar'
-        }),
-        fNavbarClick(){
-            this.fToggleSideBar();
-        },
         fNavAddClick(){
             this.bMenuClose = !this.bMenuClose;
         }
