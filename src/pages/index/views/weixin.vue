@@ -10,7 +10,7 @@
             <ul class="chatlist">
                 <li class="chatitem" v-for="chat in wechat_list">
                     <div class="item">
-                        
+                        aaa
                     </div>
                 </li>
             </ul>
