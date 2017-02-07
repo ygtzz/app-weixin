@@ -9,7 +9,9 @@
         <div class="chat">
             <ul class="chatlist">
                 <li class="chatitem" v-for="chat in wechat_list">
-                    aaaa{{chat}}
+                    <div class="item">
+                        
+                    </div>
                 </li>
             </ul>
         </div>
