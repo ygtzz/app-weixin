@@ -4,7 +4,7 @@ import { sync } from 'vuex-router-sync';
 import store from './vuex/store';
 import 'static/css/normalize.css';
 import 'static/css/quick-layout.css';
-// import 'static/css/font-awesome.min.css';
+import 'static/css/font-awesome.min.css';
 import 'static/css/iconfont.css';
 import 'static/css/site.css';
 import routeConfig from './router.js';

@@ -1,122 +1,59 @@
-import vue from 'vue';
-import vueRes from 'vue-resource';
-
-vue.use(vueRes);
-/**
- * Created by zhengguorong on 16/6/22.
- */
-/**
- * get请求
- * @param  {String} options.url   api地址
- * @param  {String} options.query query参数
- * @return {Promise}               Promise
- */
-const _get = ({ url, query }, commit) => {
-  if (commit) commit('START_LOADING')
-  let _url
-  if (query) {
-    _url = `http://localhost:8080/v4/api${url}?${query}`
-  } else {
-    _url = `http://localhost:8080/v4/api${url}`
-  }
-
-  return vue.http.get(_url)
-    .then((res) => {
-      if (commit) commit('FINISH_LOADING')
-      if (res.status >= 200 && res.status < 300) {
-        return res.data
-      }
-      return Promise.reject(new Error(res.status))
-    })
+//index-nav
+export const get_index_nav = ({ dispatch }) => {
+    let index_nav = require('../mock/index-nav')
+    dispatch('SET_MENU', index_nav)
+}
+export const set_menu_active = ({ dispatch }, _index) => {
+    dispatch('SET_MENU_ACTIVE', _index)
+}
+export const set_chat_count = ({ dispatch }, count) => {
+    dispatch('SET_CHAT_COUNT', count)
 }
 
-/**
- * 获取即将开始电影列表
- * @param  {Function} options.commit store对象解构出来的函数，无需手动提供
- * @param  {Number} page             页数
- * @param  {Number} count             每页数量
- * @return {Promise}                  Promise
- */
-export const fetchComingSoonLists = ({ commit }, page, count) => {
-  const url = '/film/coming-soon'
-  const query = `count=${count}&page=${page}&_t=` + new Date().getTime()
-  return _get({url, query}, commit)
-    .then((json) => {
-      if (json.status === 0) {
-        return commit('FETCH_COMING_SOON_SUCCESS', json.data)
-      }
-      return Promise.reject(new Error('fetchFilmsLists failure'))
-    })
-    .catch((error) => {
-      // commit('FETCH_TOPIC_LISTS_FAILURE', topicTab, page)
-      return Promise.reject(error)
-    })
+//chat
+export const set_news_state = ({ dispatch }, index, val, fn) => {
+    dispatch('SET_NEWS_STATE', index, val)
+    !!fn && fn()
 }
-/**
- * 获取正在热映电影列表
- * @param  {Function} options.commit store对象解构出来的函数，无需手动提供
- * @param  {Number} page             页数
- * @param  {Number} count             每页数量
- * @return {Promise}                  Promise
- */
-export const fetchNowPlayingLists = ({ commit }, page, count) => {
-  const url = '/film/now-playing'
-  const query = `count=${count}&page=${page}&_t=` + new Date().getTime()
-  return _get({ url, query }, commit)
-    .then((json) => {
-      if (json.status === 0) {
-        return commit('FETCH_NOW_PLAYING_SUCCESS', json.data)
-      }
-      return Promise.reject(new Error('FETCH_NOW_PLAYING failure'))
-    })
-    .catch((error) => {
-      // commit('FETCH_TOPIC_LISTS_FAILURE', topicTab, page)
-      return Promise.reject(error)
-    })
+export const delete_news = ({ dispatch }, index, fn) => {
+    dispatch('DELETE_NEWS', index)
+    !!fn && fn()
 }
-/**
- * 获取电影详情
- * @param  {Function} options.commit store对象解构出来的函数，无需手动提供
- * @param  {Number} id             电影id
- * @return {Promise}                  Promise
- */
-export const fetchFilmDetail = ({commit}, id) => {
-  const url = '/film/' + id
-  const query = '_t=' + new Date().getTime()
-  return _get({ url, query }, commit)
-    .then((json) => {
-      if (json.status === 0) {
-        return commit('FETCH_DETAIL_SUCCESS', json.data)
-      }
-      return Promise.reject(new Error('FETCH_DETAIL failure'))
-    })
-    .catch((error) => {
-      // commit('FETCH_TOPIC_LISTS_FAILURE', topicTab, page)
-      return Promise.reject(error)
-    })
+export const get_menu_wechat_list = ({ dispatch }, fn) => {
+    let list = require('../mock/chat')
+    dispatch('SET_MENU_WECHAT_LIST', list)
+    !!fn && fn()
 }
-/**
- * 获取广告
- * @param  {Function} options.commit store对象解构出来的函数，无需手动提供
- * @param  {Number} id             电影id
- * @return {Promise}                  Promise
- */
-export const fetchBillboards = ({commit}) => {
-  const url = '/billboard/home'
-  const query = '_t=' + new Date().getTime()
-  return _get({ url, query }, commit)
-    .then((json) => {
-      if (json.status === 0) {
-        return commit('FETCH_BANNER_SUCCESS', json.data)
-      }
-      return Promise.reject(new Error('FETCH_BANNER_SUCCESS failure'))
-    })
-    .catch((error) => {
-      // commit('FETCH_TOPIC_LISTS_FAILURE', topicTab, page)
-      return Promise.reject(error)
-    })
+export const set_chat = ({ dispatch }, model) => {
+    dispatch('CHAT', model)
 }
 
-export const fToggleSideBar = ({commit}) => {
-    commit('CHANGE_LEFTNAV_STATE')
+//contact
+export const get_person_info = ({ dispatch }, id, fn) => {
+    let info = require('../mock/person-info-' + id)
+    dispatch('PERSON_INFO', info)
+    !!fn && fn()
 }
+export const get_friends_list = ({ dispatch }, id) => {
+    let friends = require('../mock/contact')
+    dispatch('CONTACT_FRIENDS', friends)
+}
+
+//find
+export const set_iframe_url = ({ dispatch }, urlObj, fn) => {
+    dispatch('SET_IFRAME_URL', urlObj)
+    !!fn && fn()
+}
+
+
+
+//优雅结构,可读性略差
+// export const deleteTodo = makeAction('DELETE_TODO')
+// export const toggleTodo = makeAction('TOGGLE_TODO')
+// export const editTodo = makeAction('EDIT_TODO')
+// export const toggleAll = makeAction('TOGGLE_ALL')
+// export const clearCompleted = makeAction('CLEAR_COMPLETED')
+
+// function makeAction (type) {
+//   return ({ dispatch }, ...args) => dispatch(type, ...args)
+// }

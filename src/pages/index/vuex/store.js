@@ -1,19 +1,24 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import home from './modules/home';
-import app from './modules/app';
-import detail from './modules/detail';
-import * as getters from './getters'
-import * as actions from './actions';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+//基本通用
+import base from './modules/base'
+//聊天
+import chat from './modules/chat'
+//联系人
+import contacts from './modules/contacts'
+//发现
+import find from './modules/find'
+
+Vue.use(Vuex)
+
 
 export default new Vuex.Store({
-    actions,
-    getters,
-    modules:{
-        app,
-        home,
-        detail
-    }
-});
+    modules: {
+        base,
+        chat,
+        contacts,
+        find
+    },
+    strict: true
+})
