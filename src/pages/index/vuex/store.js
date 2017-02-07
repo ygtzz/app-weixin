@@ -9,11 +9,15 @@ import chat from './modules/chat'
 import contacts from './modules/contacts'
 //发现
 import find from './modules/find'
+import * as getters from './getters'
+import * as actions from './actions';
 
 Vue.use(Vuex)
 
 
 export default new Vuex.Store({
+    actions,
+    getters,
     modules: {
         base,
         chat,
