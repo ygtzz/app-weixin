@@ -4,7 +4,7 @@
         <span @click="fNavAddClick" class="jia-wrap">
             <i class="iconfont icon-tips-jia jia"></i>
         </span>
-        <ul class="tips-menu" :class="{'tips-close':bMenuActive}">
+        <ul class="tips-menu" :class="{'tips-close':bMenuClose}">
             <li class="tip-item"><i class="iconfont icon-tips-xiaoxi"></i>发起群聊</li>
             <li class="tip-item"><i class="iconfont icon-tips-add-friend"></i>添加朋友</li>
             <li class="tip-item"><i class="iconfont iconfont icon-tips-saoyisao"></i>扫一扫</li>
@@ -19,7 +19,7 @@ export default {
     name:'c-header',
     data(){
         return {
-            bMenuActive:false            
+            bMenuClose:true            
         }
     },
     methods:{
@@ -30,7 +30,7 @@ export default {
             this.fToggleSideBar();
         },
         fNavAddClick(){
-            this.bMenuActive = !this.bMenuActive;
+            this.bMenuClose = !this.bMenuClose;
         }
     }
 }
@@ -51,5 +51,5 @@ export default {
     .tips-menu:before{width:0;height:0;position:absolute;top:-8px;right:15px;content:"";border-width:0 6px 8px;border-color:rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #49484b rgba(0, 0, 0, 0);border-style:solid;}
     .tip-item:not(:last-child){border-bottom:1px solid #5b5b5d;}
     .tip-item i{margin-right:15px}
-    .tips-close{opacity:0;transform:scale(.8);transform-origin:90% 0}
+    .tips-close{opacity:0;transform:scale(.7);transform-origin:90% 0}
 </style>

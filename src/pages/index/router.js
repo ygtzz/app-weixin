@@ -1,15 +1,12 @@
-import home from './widget/home/home.vue';
-import detail from './widget/detail.vue';
-import movie from './widget/movie/movie.vue';
-import cinema from './widget/cinema.vue';
-import query from './widget/maizuo-query.vue';
-import my from './widget/my.vue';
+import weixin from './views/weixin.vue';
+import address from './views/address.vue';
+import find from './views/find.vue';
+import me from './views/me.vue';
 
 export default [
-    { path: '/', component: home ,name:'home'},
-    { path: '/detail/:id', component: detail, name:'detail'},
-    { path: '/movie', component: movie,name:'movie' },
-    { path: '/my', component: my,name:'my'},
-    { path: '/cinema', component: cinema,name:'cinema'},
-    { path: '/query', component: query,name:'query'}
+    { path: '/', component: weixin },
+    { path: '/weixin', component: weixin, name:'weixin'},
+    { path: '/address', component: address,name:'address' },
+    { path: '/find', component: find,name:'find'},
+    { path: '/me', component: me,name:'me'}
 ];
