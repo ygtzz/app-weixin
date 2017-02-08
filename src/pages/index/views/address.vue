@@ -1,39 +1,66 @@
 <template>
-    <div class="footer">
-        通讯录
+    <div>
+        <c-searchbar></c-searchbar>
+        <ul>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/contact_top-friend-notify.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        新的朋友
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/contact_top-addgroup.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        群聊
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/contact_top-tag.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        标签
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/contact_top-offical.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        公众号
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </template>
 <script>
-import Vue from "vue";
+import searchBar from '../widget/searchbar.vue';
+import imgHolder from '../widget/imgHolder.vue';
 
 export default {
-    name:'c-footer',
-    className: 'footer'
+    name:'c-address',
+    components:{
+        'c-searchbar':searchBar,
+        'c-imgHolder':imgHolder
+    }
 }
 </script>
 <style lang="sass" scoped>
-    .footer{
-        text-align: center;
-        color:#5D656B;
-        background-color:#f9f9f9;
-        font-size:12px;
-        height:50px;
-        display:flex;
-        align-items:center;
-        a:link,a:visited,a:hover,a:active{color:#929292}
-        a{
-            display:block;
-            flex:1;
-            text-decoration:none;
-            cursor:pointer;
-        }
-        p{margin:0;padding:0;transform:scale(0.9)}
-        i{
-            font-size:28px;
-        }
-        .dot{width:11px;height:11px;margin-left:-8px;margin-top:1px}
-        .count{background-color:#f43531;color:#fff;font-size:14px;line-height:18px;border-radius:9px;padding:0px 4px;position:absolute;margin-left:-8px;
-            font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
-        }
-    }
+   .item{padding-left:15px;background-color:#fff;}
+   .item-i{padding:10px 0;display:flex;align-items:center;}
+   .item:not(:last-child) .item-i{border-bottom:1px solid #d9d9d9;}
+   .item-img{width:36px;height:36px;margin-right:10px}
+   .item-info{font-size:17px}
 </style>

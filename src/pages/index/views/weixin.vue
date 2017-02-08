@@ -1,11 +1,6 @@
 <template>
     <div class="weixin">
-        <div class="search_bar">
-            <div class="search">
-                <i class="fa fa-search"></i>
-                <span>搜索</span>
-            </div>
-        </div>
+        <c-searchbar></c-searchbar>
         <div class="chat">
             <ul class="chatlist">
                 <li class="chatitem" v-for="item in wechat_list">
@@ -33,6 +28,7 @@
 <script>
 import {mapGetters,mapActions} from "vuex";
 import imgHolder from '../widget/imgHolder.vue';
+import searchBar from '../widget/searchbar.vue';
 import {fmtDate} from 'widget/filter/datetime';
 
 export default {
@@ -92,7 +88,8 @@ export default {
         }
     },
     components:{
-        'c-imgHolder':imgHolder
+        'c-imgHolder':imgHolder,
+        'c-searchbar':searchBar
     },
     filters:{
         fmtDate:fmtDate
@@ -100,8 +97,6 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-    .search_bar{padding:8px 10px;background-color:#efeff4;}
-    .search{color:#b2b2b2;font-size:14px;background-color:#fff;line-height:1.8;text-align:center;border-radius:4px}
     .item{display:flex;padding:4px 5px;background-color:#fff;border-bottom:1px solid #dbdbdb;}
     .item-img{
         width:50px;height:50px;

@@ -1,6 +1,6 @@
 <template>
     <div class="imgHolder" :style="{'background-image':'url('+bgUrl+')'}">
-        <img :src="src" :alt="alt" :style="imgStyle" :class="[imgClass]"></img>
+        <img :src="src" :alt="alt" :style="imgStyle"></img>
     </div>
 </template>
 <script>
@@ -20,10 +20,7 @@ export default {
             defalut:'http://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png'
         },
         imgStyle:{
-            type:String
-        },
-        imgClass:{
-            type:String
+            type:Object
         }
     }
 }
