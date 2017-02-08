@@ -1,6 +1,6 @@
 <template>
     <div class="imgHolder" :style="{'background-image':'url('+bgUrl+')'}">
-        <img :src="src" :alt="alt"></img>
+        <img :src="src" :alt="alt" :style="imgStyle" :class="[imgClass]"></img>
     </div>
 </template>
 <script>
@@ -18,6 +18,12 @@ export default {
         bgUrl:{
             type:String,
             defalut:'http://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png'
+        },
+        imgStyle:{
+            type:String
+        },
+        imgClass:{
+            type:String
         }
     }
 }

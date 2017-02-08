@@ -8,9 +8,22 @@
         </div>
         <div class="chat">
             <ul class="chatlist">
-                <li class="chatitem" v-for="chat in wechat_list">
+                <li class="chatitem" v-for="item in wechat_list">
                     <div class="item">
-                        aaa
+                        <div class="item-img">
+                            <c-imgHolder :src="item.base.iconSrc" :alt="pic" :imgStyle="{borderRadius:'4px'}"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
+                            <p class="info-title" v-text="item.base.name"></p>
+                            <p class="info-msg">
+                                <span :title="item.base.type" v-show="item.base.type==='friends'" v-text="item.chatBaseModel.endChatAuth+':'"></span>
+                                <span v-text="item.chatBaseModel.endChatTxt"></span>
+                            </p>
+                        </div>
+                        <div class="item-other">
+                            <p class="other-time">{{item.chatBaseModel.endTimeStr | fmtDate('hh:ss')}}</p>
+                            <p class="iconfont icon-mute" :title="item.chatConfigModel.newsMute" v-show="item.chatConfigModel.newsMute"></p>                           
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -19,6 +32,8 @@
 </template>
 <script>
 import {mapGetters,mapActions} from "vuex";
+import imgHolder from '../widget/imgHolder.vue';
+import {fmtDate} from 'widget/filter/datetime';
 
 export default {
     name:'c-weixin',
@@ -75,10 +90,25 @@ export default {
                 this.computed_unRead_count()
             })
         }
+    },
+    components:{
+        'c-imgHolder':imgHolder
+    },
+    filters:{
+        fmtDate:fmtDate
     }
 }
 </script>
 <style lang="sass" scoped>
     .search_bar{padding:8px 10px;background-color:#efeff4;}
     .search{color:#b2b2b2;font-size:14px;background-color:#fff;line-height:1.8;text-align:center;border-radius:4px}
+    .item{display:flex;padding:4px 5px;background-color:#fff;border-bottom:1px solid #dbdbdb;}
+    .item-img{
+        width:50px;height:50px;
+    }
+    .item-info{flex:1;margin-left:8px}
+    .info-title{font-size:18px;line-height:25px;}
+    .info-msg{font-szie:14px;line-height:23px;color:#888}
+    .item-other{color:#b2b2b2;text-align:right}
+    .other-time{line-height:25px}
 </style>
