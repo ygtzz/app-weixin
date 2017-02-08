@@ -4,7 +4,7 @@
             <i class="iconfont icon-wechat"><span class="count">12</span></i>
             <p>微信</p>
         </router-link>
-        <router-link :to="{name:'address'}">
+        <router-link :to="{name:'contract'}">
             <i class="iconfont icon-contact"></i>
             <p>通讯录</p>
         </router-link>
