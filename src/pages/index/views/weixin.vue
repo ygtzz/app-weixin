@@ -27,7 +27,6 @@
 </template>
 <script>
 import {mapGetters,mapActions} from "vuex";
-import imgHolder from '../widget/imgHolder.vue';
 import searchBar from '../widget/searchbar.vue';
 import {fmtDate} from 'widget/filter/datetime';
 
@@ -88,7 +87,6 @@ export default {
         }
     },
     components:{
-        'c-imgHolder':imgHolder,
         'c-searchbar':searchBar
     },
     filters:{
@@ -98,9 +96,7 @@ export default {
 </script>
 <style lang="sass" scoped>
     .item{display:flex;padding:4px 5px;background-color:#fff;border-bottom:1px solid #dbdbdb;}
-    .item-img{
-        width:50px;height:50px;
-    }
+    .item-img{width:50px;height:50px;}
     .item-info{flex:1;margin-left:8px}
     .info-title{font-size:18px;line-height:25px;}
     .info-msg{font-szie:14px;line-height:23px;color:#888}

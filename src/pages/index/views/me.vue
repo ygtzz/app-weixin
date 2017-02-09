@@ -1,39 +1,102 @@
 <template>
-    <div class="footer">
-       我
+    <div>
+        <ul class="list">
+            <li class="item item_head">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder :imgStyle="{borderRadius:'4px'}" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        <p class="title">yangtao</p>
+                        <p class="desc">微信号：wxid_yangtao</p>
+                    </div>
+                    <div class="item-other">
+                        <c-imgHolder class="qr" src="static/images/chat-info-qr.png"></c-imgHolder>
+                        <i class="fa fa-angle-right"></i> 
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/me_more-my-album.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">相册</div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/me_more-my-favorites.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">收藏</div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/me_more-my-bank-card.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">钱包</div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/me_my-card-package-icon.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">卡包</div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/me_more-expression.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">表情</div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/me_more-setting.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">设置</div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </template>
 <script>
-import Vue from "vue";
 
 export default {
-    name:'c-footer',
-    className: 'footer'
+    name:'c-me'
 }
 </script>
 <style lang="sass" scoped>
-    .footer{
-        text-align: center;
-        color:#5D656B;
-        background-color:#f9f9f9;
-        font-size:12px;
-        height:50px;
-        display:flex;
-        align-items:center;
-        a:link,a:visited,a:hover,a:active{color:#929292}
-        a{
-            display:block;
-            flex:1;
-            text-decoration:none;
-            cursor:pointer;
-        }
-        p{margin:0;padding:0;transform:scale(0.9)}
-        i{
-            font-size:28px;
-        }
-        .dot{width:11px;height:11px;margin-left:-8px;margin-top:1px}
-        .count{background-color:#f43531;color:#fff;font-size:14px;line-height:18px;border-radius:9px;padding:0px 4px;position:absolute;margin-left:-8px;
-            font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
-        }
-    }
+   .list{margin-top:22px}
+   .item{padding:0 15px;background-color:#fff;}
+   .item-i{padding:9px 0;display:flex;align-items:center;}
+   .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
+   .item-img{width:20px;height:20px;margin-right:5px}
+   .item-info{font-size:17px;flex:1}
+   .item-other{font-size:22px;color:#c8c8cd}
+   .item_head{
+       .item-img{width:60px;height:60px;}
+   }
+   .title{font-size:18px;color:#111;line-height:25px;}
+   .desc{font-size:14px}
+   .qr{display:inline-block;width:25px;height:25px;vertical-align:middle;margin-right:10px;}
 </style>

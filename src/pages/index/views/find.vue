@@ -89,13 +89,8 @@
     </div>
 </template>
 <script>
-import imgHolder from '../widget/imgHolder.vue';
-
 export default {
-    name:'c-find',
-    components:{
-        'c-imgHolder':imgHolder
-    }
+    name:'c-find'
 }
 </script>
 <style lang="sass" scoped>

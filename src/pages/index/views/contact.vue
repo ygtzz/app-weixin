@@ -62,7 +62,6 @@
 </template>
 <script>
 import searchBar from '../widget/searchbar.vue';
-import imgHolder from '../widget/imgHolder.vue';
 import {mapGetters,mapActions} from 'vuex';
 
 export default {
@@ -91,8 +90,7 @@ export default {
         }
     },
     components:{
-        'c-searchbar':searchBar,
-        'c-imgHolder':imgHolder
+        'c-searchbar':searchBar
     }
 }
 </script>

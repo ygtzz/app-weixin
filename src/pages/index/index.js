@@ -10,6 +10,9 @@ import 'static/css/site.css';
 import routeConfig from './router.js';
 import FastClick from 'fastclick'
 import App from './app.vue';
+//common Component
+import imgHolder from './widget/imgHolder.vue';
+Vue.component('c-imgHolder',imgHolder);
 
 window.addEventListener('load', () => {
   FastClick.attach(document.body)
