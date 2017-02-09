@@ -4,25 +4,32 @@
         <div class="chat">
             <ul class="chatlist">
                 <li class="chatitem" v-for="item in wechat_list">
-                    <div class="item">
-                        <div class="item-img">
-                            <c-imgHolder :src="item.base.iconSrc" :alt="pic"></c-imgHolder>
+                    <router-link :to="{name:'chatroom'}">
+                        <div class="item">
+                            <div class="item-img">
+                                <c-imgHolder :src="item.base.iconSrc" :alt="pic"></c-imgHolder>
+                            </div>
+                            <div class="item-info">
+                                <p class="info-title" v-text="item.base.name"></p>
+                                <p class="info-msg">
+                                    <span :title="item.base.type" v-show="item.base.type==='friends'" v-text="item.chatBaseModel.endChatAuth+':'"></span>
+                                    <span v-text="item.chatBaseModel.endChatTxt"></span>
+                                </p>
+                            </div>
+                            <div class="item-other">
+                                <p class="other-time">{{item.chatBaseModel.endTimeStr | fmtDate('hh:ss')}}</p>
+                                <p class="iconfont icon-mute" :title="item.chatConfigModel.newsMute" v-show="item.chatConfigModel.newsMute"></p>                           
+                            </div>
                         </div>
-                        <div class="item-info">
-                            <p class="info-title" v-text="item.base.name"></p>
-                            <p class="info-msg">
-                                <span :title="item.base.type" v-show="item.base.type==='friends'" v-text="item.chatBaseModel.endChatAuth+':'"></span>
-                                <span v-text="item.chatBaseModel.endChatTxt"></span>
-                            </p>
-                        </div>
-                        <div class="item-other">
-                            <p class="other-time">{{item.chatBaseModel.endTimeStr | fmtDate('hh:ss')}}</p>
-                            <p class="iconfont icon-mute" :title="item.chatConfigModel.newsMute" v-show="item.chatConfigModel.newsMute"></p>                           
-                        </div>
-                    </div>
+                    </router-link>
                 </li>
             </ul>
         </div>
+        <transition name="cover">
+            <keep-alive>
+                <router-view></router-view>
+            </keep-alive>
+        </transition>
     </div>
 </template>
 <script>
@@ -59,7 +66,6 @@ export default {
         computed_unRead_count() {
             //计算未读数量
             let sum = 0;
-            console.log(this.wechat_list)
             this.wechat_list.forEach(({
                 chatBaseModel,
                 chatConfigModel
@@ -103,4 +109,21 @@ export default {
     .item-other{color:#b2b2b2;text-align:right}
     .other-time{line-height:25px}
     :global(.imgHolder img){border-radius:4px} 
+</style>
+<style>
+    /*.cover-transition {
+        opacity: 1;
+        transition: .35s opacity ease;
+    }
+
+    .cover-enter,
+    .cover-leave {
+        opacity: .98;
+    }*/
+    .cover-enter-active{transition:all .3s ease}
+    .cover-enter-leave-active{transition:all .35s ease;}
+    .cover-enter, .cover-leave-to{
+        transform: translateX(100%);
+        opacity: 0;
+    }
 </style>
