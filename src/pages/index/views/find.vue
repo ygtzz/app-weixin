@@ -1,39 +1,109 @@
 <template>
-    <div class="footer">
-       发现
+    <div>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/find_icon-circle.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        朋友圈
+                    </div>
+                    <div class="item-other">
+                        <i class="fa fa-angle-right"></i>                    
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/find_icon-qrcode.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        扫一扫
+                    </div>
+                    <div class="item-other">
+                        <i class="fa fa-angle-right"></i>                    
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/find_icon-shake.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        摇一摇
+                    </div>
+                    <div class="item-other">
+                        <i class="fa fa-angle-right"></i>                    
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/find_icon-bottle.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        漂流瓶
+                    </div>
+                    <div class="item-other">
+                        <i class="fa fa-angle-right"></i>                    
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list">
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/find_icon-shopping.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        购物
+                    </div>
+                    <div class="item-other">
+                        <i class="fa fa-angle-right"></i>                    
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="static/images/find_icon-moregame.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        游戏
+                    </div>
+                    <div class="item-other">
+                        <i class="fa fa-angle-right"></i>                    
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </template>
 <script>
-import Vue from "vue";
+import imgHolder from '../widget/imgHolder.vue';
 
 export default {
-    name:'c-footer',
-    className: 'footer'
+    name:'c-find',
+    components:{
+        'c-imgHolder':imgHolder
+    }
 }
 </script>
 <style lang="sass" scoped>
-    .footer{
-        text-align: center;
-        color:#5D656B;
-        background-color:#f9f9f9;
-        font-size:12px;
-        height:50px;
-        display:flex;
-        align-items:center;
-        a:link,a:visited,a:hover,a:active{color:#929292}
-        a{
-            display:block;
-            flex:1;
-            text-decoration:none;
-            cursor:pointer;
-        }
-        p{margin:0;padding:0;transform:scale(0.9)}
-        i{
-            font-size:28px;
-        }
-        .dot{width:11px;height:11px;margin-left:-8px;margin-top:1px}
-        .count{background-color:#f43531;color:#fff;font-size:14px;line-height:18px;border-radius:9px;padding:0px 4px;position:absolute;margin-left:-8px;
-            font-family: PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica;
-        }
-    }
+   .list{margin-top:22px}
+   .item{padding:0 15px;background-color:#fff;}
+   .item-i{padding:9px 0;display:flex;align-items:center;}
+   .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
+   .item-img{width:20px;height:20px;margin-right:10px}
+   .item-info{font-size:17px;flex:1}
+   .item-other{font-size:22px;color:#c8c8cd}
 </style>

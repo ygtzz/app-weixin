@@ -37,7 +37,7 @@ export default {
         overflow:hidden;
         display:flex;
         flex-direction:column;
-        background-color:#EBEBEB;
+        background-color:#F1F0F6;
     }
     .top-fixed{
         

@@ -1,7 +1,7 @@
 <template>
     <div>
         <c-searchbar></c-searchbar>
-        <ul>
+        <ul class="contact-head">
             <li class="item">
                 <div class="item-i">
                     <div class="item-img">
@@ -43,16 +43,15 @@
                 </div>
             </li>
         </ul>
-        <ul class="contact-friends">
+        <ul class="contact-list">
             <li v-for="grouping in contact_friends"> 
                 <p class="contact-alpha" v-text="grouping.alpha"></p>
-                <div class="weui_cells weui_cells_access">
-                    <div class="weui_cell"
-                    v-touch:tap="go_personInfo(item.id)"
-                    v-for="item in grouping.list">
-                        <div class="weui_cell_hd">
-                            <img :src="item.iconSrc"></div>
-                        <div class="weui_cell_bd weui_cell_primary">
+                <div class="item" @click="go_personInfo(item.id)" v-for="item in grouping.list">
+                    <div class="item-i">
+                        <div class="item-img">
+                            <c-imgHolder :src="item.iconSrc"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
                             <p v-text="item.remark"></p>
                         </div>
                     </div>
@@ -67,7 +66,7 @@ import imgHolder from '../widget/imgHolder.vue';
 import {mapGetters,mapActions} from 'vuex';
 
 export default {
-    name:'c-address',
+    name:'c-contact',
     created(){
         this.get_friends_list()
         this.set_menu_active(1)
@@ -99,8 +98,9 @@ export default {
 </script>
 <style lang="sass" scoped>
    .item{padding-left:15px;background-color:#fff;}
-   .item-i{padding:10px 0;display:flex;align-items:center;}
-   .item:not(:last-child) .item-i{border-bottom:1px solid #d9d9d9;}
+   .item-i{padding:9px 0;display:flex;align-items:center;}
+   .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:36px;height:36px;margin-right:10px}
-   .item-info{font-size:17px}
+   .item-info{font-size:17px} 
+   .contact-alpha{padding-left:15px;color:#888}
 </style>

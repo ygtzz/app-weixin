@@ -29,10 +29,10 @@ export default {
 </script>
 <style lang="sass" scoped>
     .header{
-        background:#000;
+        background:linear-gradient(to bottom, #303036, #3c3b40);
         color:#efefef;
-        line-height:50px;
-        height:50px;
+        line-height:46px;
+        height:46px;
         text-align:center;
     }
     .nav-text{font-size:20px;}
