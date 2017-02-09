@@ -6,7 +6,7 @@
                 <li class="chatitem" v-for="item in wechat_list">
                     <div class="item">
                         <div class="item-img">
-                            <c-imgHolder :src="item.base.iconSrc" :alt="pic" :imgStyle="{borderRadius:'4px'}"></c-imgHolder>
+                            <c-imgHolder :src="item.base.iconSrc" :alt="pic"></c-imgHolder>
                         </div>
                         <div class="item-info">
                             <p class="info-title" v-text="item.base.name"></p>
@@ -102,4 +102,5 @@ export default {
     .info-msg{font-szie:14px;line-height:23px;color:#888}
     .item-other{color:#b2b2b2;text-align:right}
     .other-time{line-height:25px}
+    :global(.imgHolder img){border-radius:4px} 
 </style>

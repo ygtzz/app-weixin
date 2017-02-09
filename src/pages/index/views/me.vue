@@ -4,7 +4,7 @@
             <li class="item item_head">
                 <div class="item-i">
                     <div class="item-img">
-                        <c-imgHolder :imgStyle="{borderRadius:'4px'}" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
+                        <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
                     </div>
                     <div class="item-info">
                         <p class="title">yangtao</p>
@@ -96,6 +96,7 @@ export default {
    .item_head{
        .item-img{width:60px;height:60px;}
    }
+   :global(.imgHolder img){border-radius:4px}   
    .title{font-size:18px;color:#111;line-height:25px;}
    .desc{font-size:14px}
    .qr{display:inline-block;width:25px;height:25px;vertical-align:middle;margin-right:10px;}
