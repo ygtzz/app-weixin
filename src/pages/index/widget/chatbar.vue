@@ -44,8 +44,8 @@ export default {
     },
     data() {
         return {
-            way: 'say',
-            bSaying: true,
+            way: 'txt',
+            bSaying: false,
             bSayingMove:false
         }
     },
