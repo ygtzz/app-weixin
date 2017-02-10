@@ -12,7 +12,9 @@ import FastClick from 'fastclick'
 import App from './app.vue';
 //common Component
 import imgHolder from './widget/imgHolder.vue';
+import cHeader from './widget/cHeader.vue';
 Vue.component('c-imgHolder',imgHolder);
+Vue.component('c-cHeader',cHeader);
 
 window.addEventListener('load', () => {
   FastClick.attach(document.body)
