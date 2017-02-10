@@ -9,17 +9,19 @@
             <h1>chatroom</h1>
         </section>
         <footer class="footer">
-            <c-chatbar></c-chatbar>
+            <c-chatlinkbar></c-chatlinkbar>
         </footer>
     </div>
 </template>
 <script>
 import chatbar from 'index/widget/chatbar.vue';
+import chatlinkbar from 'index/widget/chatlinkbar.vue';
 
 export default {
     name:'c-chatroom',
     components:{
-        'c-chatbar':chatbar
+        'c-chatbar':chatbar,
+        'c-chatlinkbar':chatlinkbar
     }
 }
 </script>
