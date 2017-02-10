@@ -1,12 +1,15 @@
 <template>
-    <div>
-        <span class="iconfont icon-dialogue-jianpan" v-show="way==='say'" v-touch:tap="switch_way('txt')"></span>
-        <span class="iconfont icon-dialogue-voice" v-show='way==="txt"' v-touch:tap='switch_way("say")'></span>
-        
+    <div class="chatbar">
+        <span class="iconfont icon-dialogue-jianpan" v-show="way==='say'" @click="switch_way('txt')"></span>
+        <span class="iconfont icon-dialogue-voice" v-show='way==="txt"' @click='switch_way("say")'></span>
+        <input class="input" type="text" />
+        <span class="expression iconfont icon-dialogue-smile"></span>
+        <span class="more iconfont icon-dialogue-jia"></span>
+    </div>    
 </template>
 <script>
 export default {
-    replace: true,
+    name:'c-charbar',
     props: {
 
     },
@@ -33,3 +36,21 @@ export default {
     }
 }
 </script>
+<style lang="sass" scoped>
+    .chatbar{
+        padding:0;
+        background-color:#fff;
+        height:46px;
+        line-height:46px;
+        display:flex;
+        align-items:center;
+        .iconfont{font-size:30px;line-height:40px;color:#7d7e83;padding:0 5px;}
+    }
+    .input{
+        flex:1;
+        border:1px solid #bdbdbd;
+        border-radius:3px;
+        padding:6px 5px;
+        font-size:16px;
+    }
+</style>

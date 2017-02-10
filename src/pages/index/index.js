@@ -8,7 +8,8 @@ import 'static/css/font-awesome.min.css';
 import 'static/css/iconfont.css';
 import 'static/css/site.css';
 import routeConfig from './router.js';
-import FastClick from 'fastclick'
+import FastClick from 'fastclick';
+import VueTouch from 'vue-touch';
 import App from './app.vue';
 //common Component
 import imgHolder from './widget/imgHolder.vue';
@@ -16,11 +17,13 @@ import cHeader from './widget/cHeader.vue';
 Vue.component('c-imgHolder',imgHolder);
 Vue.component('c-cHeader',cHeader);
 
+Vue.use(VueTouch);
+Vue.use(VueRouter);
+
 window.addEventListener('load', () => {
   FastClick.attach(document.body)
 });
 
-Vue.use(VueRouter);
 const router = new VueRouter({
     mode:'hash',
     routes:routeConfig
