@@ -16,6 +16,6 @@ ul,li,p{margin:0;padding:0}
 /*slideup*/
 .slide-up-enter-active,.slide-up-leave-active{transition:all .1s ease}
 .slide-up-enter,.slide-up-leave-to{
-    transform:translateY(50px);
+    transform:translateY(100%);
     opacity:0
 }
