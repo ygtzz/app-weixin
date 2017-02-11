@@ -13,3 +13,6 @@ export const DELETE_NEWS = 'DELETE_NEWS'
 export const PERSON_INFO = 'PERSON_INFO'
 export const CONTACT_FRIENDS = 'CONTACT_FRIENDS'
 export const FRIEND_ID = 'FRIEND_ID'
+
+//common
+export const chat_type = 'chat_type'

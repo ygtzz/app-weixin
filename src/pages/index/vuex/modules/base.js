@@ -2,10 +2,12 @@ import {
     SET_MENU,
     SET_MENU_ACTIVE,
     BACK_PATH,
-    SET_CHAT_COUNT
+    SET_CHAT_COUNT,
+    chat_type
 } from '../mutation-types'
 
 let state = {
+    chatType:'',
     backPath: '',
     index_nav: [{
         index: 0,
@@ -32,6 +34,9 @@ const mutations = {
     },
     [SET_CHAT_COUNT](state, count) {
         state.index_nav[0].hint.count = count;
+    },
+    [chat_type](state,type){
+        this.chatType = type;
     }
 }
 

@@ -4,24 +4,22 @@
         <div class="chat">
             <ul class="chatlist">
                 <li class="chatitem" v-for="item in wechat_list">
-                    <router-link :to="{name:'chatroom'}">
-                        <div class="item">
-                            <div class="item-img">
-                                <c-imgHolder :src="item.base.iconSrc" :alt="pic"></c-imgHolder>
-                            </div>
-                            <div class="item-info">
-                                <p class="info-title" v-text="item.base.name"></p>
-                                <p class="info-msg">
-                                    <span :title="item.base.type" v-show="item.base.type==='friends'" v-text="item.chatBaseModel.endChatAuth+':'"></span>
-                                    <span v-text="item.chatBaseModel.endChatTxt"></span>
-                                </p>
-                            </div>
-                            <div class="item-other">
-                                <p class="other-time">{{item.chatBaseModel.endTimeStr | fmtDate('hh:ss')}}</p>
-                                <p class="iconfont icon-mute" :title="item.chatConfigModel.newsMute" v-show="item.chatConfigModel.newsMute"></p>                           
-                            </div>
+                    <div class="item" @click="fChatItemClick(item)">
+                        <div class="item-img">
+                            <c-imgHolder :src="item.base.iconSrc" :alt="pic"></c-imgHolder>
                         </div>
-                    </router-link>
+                        <div class="item-info">
+                            <p class="info-title" v-text="item.base.name"></p>
+                            <p class="info-msg">
+                                <span :title="item.base.type" v-show="item.base.type==='friends'" v-text="item.chatBaseModel.endChatAuth+':'"></span>
+                                <span v-text="item.chatBaseModel.endChatTxt"></span>
+                            </p>
+                        </div>
+                        <div class="item-other">
+                            <p class="other-time">{{item.chatBaseModel.endTimeStr | fmtDate('hh:ss')}}</p>
+                            <p class="iconfont icon-mute" :title="item.chatConfigModel.newsMute" v-show="item.chatConfigModel.newsMute"></p>                           
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -63,6 +61,10 @@ export default {
             'set_news_state',
             'delete_news'
         ]),
+        fChatItemClick(item){
+            this.set_chat(item);
+            this.$router.push({name:'chatroom'});
+        },
         computed_unRead_count() {
             //计算未读数量
             let sum = 0;
@@ -109,7 +111,4 @@ export default {
     .item-other{color:#b2b2b2;text-align:right}
     .other-time{line-height:25px}
     :global(.imgHolder img){border-radius:4px} 
-</style>
-<style>
-    
 </style>

@@ -20,14 +20,7 @@ ul,li,p{margin:0;padding:0}
     transform:translateY(100%);
     opacity:0
 }
-/*.cover-transition {
-    opacity: 1;
-    transition: .35s opacity ease;
-}
-.cover-enter,
-.cover-leave {
-    opacity: .98;
-}*/
+/*slideleft*/
 .cover-enter-active{transition:all .3s ease}
 .cover-leave-active{transition:all .35s ease;}
 .cover-enter,.cover-leave-active{
