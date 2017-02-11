@@ -111,19 +111,5 @@ export default {
     :global(.imgHolder img){border-radius:4px} 
 </style>
 <style>
-    /*.cover-transition {
-        opacity: 1;
-        transition: .35s opacity ease;
-    }
-
-    .cover-enter,
-    .cover-leave {
-        opacity: .98;
-    }*/
-    .cover-enter-active{transition:all .3s ease}
-    .cover-enter-leave-active{transition:all .35s ease;}
-    .cover-enter, .cover-leave-to{
-        transform: translateX(100%);
-        opacity: 0;
-    }
+    
 </style>

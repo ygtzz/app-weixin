@@ -1,12 +1,12 @@
 <template>
     <div class="stage con">
         <header class="header">
-            <c-cHeader :bBack="true" backText="微信" midText="微信(12)">
+            <c-cHeader @leftClick="fHeaderLeftClick" :bBack="true" backText="微信" midText="微信(12)">
                 <span><i class="fa fa-angle-right"></i></span>
             </c-cHeader>
         </header>
         <section class="body">
-            <h1>chatroom</h1>
+            
         </section>
         <footer class="footer">
             <c-chatlinkbar></c-chatlinkbar>
@@ -19,6 +19,11 @@ import chatlinkbar from 'index/widget/chatlinkbar.vue';
 
 export default {
     name:'c-chatroom',
+    methods:{
+        fHeaderLeftClick(){
+            location.hash = "weixin";
+        }
+    },
     components:{
         'c-chatbar':chatbar,
         'c-chatlinkbar':chatlinkbar
