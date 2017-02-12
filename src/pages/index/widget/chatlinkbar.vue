@@ -7,9 +7,7 @@
                 </div>
                 <div class="right">
                     <ul class="list">
-                        <li class="item">翻译计划</li>
-                        <li class="item">绝密试卷</li>
-                        <li class="item">稀土掘金</li>
+                        <li class="item" v-for="item in aMenu">{{item.title}}</li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +28,9 @@ import chatbar from './chatbar.vue';
 export default {
     name:'c-charLinkbar',
     props: {
-
+        aMenu:{
+            type:Array
+        }
     },
     data() {
         return {

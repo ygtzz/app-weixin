@@ -15,7 +15,7 @@ ul,li,p{margin:0;padding:0}
 .stage{position:absolute;top:0;left:0;right:0;bottom:0;z-index:10;background-color:#F1F0F6;}
 /*slideup*/
 .slide-up-enter-active{transition:all .1s ease}
-.slide-up-leave-active{transition:all .5s ease}
+.slide-up-leave-active{transition:all .1s ease}
 .slide-up-enter,.slide-up-leave-active{
     transform:translateY(100%);
     opacity:0

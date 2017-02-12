@@ -11,7 +11,8 @@
             
         </section>
         <footer class="footer">
-            <c-chatlinkbar></c-chatlinkbar>
+            <c-chatbar v-if="dialogue_type!='service'"></c-chatbar>        
+            <c-chatlinkbar v-if="dialogue_type=='service'" :aMenu="dialogue_bar.menu"></c-chatlinkbar>
         </footer>
     </div>
 </template>
@@ -56,9 +57,9 @@ export default {
                 let nextPath = '';
                 let roleType = this.dialogue_type;
                 if (roleType === 'group') {
-                    nextPath = '/chat/dialogue/chat-info'
+                    nextPath = '/weixin/room/chat-info'
                 } else if (roleType === 'friends') {
-                    nextPath = '/chat/dialogue/chat-detail'
+                    nextPath = '/weixin/room/chat-detail'
                 } else if (roleType === 'service') {
                     nextPath = ''
                 }

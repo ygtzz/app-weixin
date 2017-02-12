@@ -62,6 +62,7 @@ export default {
             'delete_news'
         ]),
         fChatItemClick(item){
+            console.log(item)
             this.set_chat(item);
             this.$router.push({name:'chatroom'});
         },
