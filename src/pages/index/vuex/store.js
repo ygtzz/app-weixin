@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VueResource from 'vue-resource';
 
 //基本通用
 import base from './modules/base'
@@ -13,7 +14,7 @@ import * as getters from './getters'
 import * as actions from './actions';
 
 Vue.use(Vuex)
-
+Vue.use(VueResource);
 
 export default new Vuex.Store({
     actions,

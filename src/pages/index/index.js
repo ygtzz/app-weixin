@@ -28,7 +28,10 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  store.commit('BACK_PATH', from.fullPath)
+  const toPath = to.fullPath;
+  const toPath_end = toPath.lastIndexOf('/');
+  const backPath = toPath.slice(0, toPath_end);
+  store.commit('BACK_PATH', backPath);
   next();
 });
 

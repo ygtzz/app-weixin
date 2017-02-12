@@ -40,9 +40,9 @@ export const get_friends_list = ({ commit }, id) => {
 }
 
 //find
-export const set_iframe_url = ({ commit }, urlObj, fn) => {
+export const set_iframe_url = ({ commit }, urlObj) => {
     commit('SET_IFRAME_URL', urlObj)
-    !!fn && fn()
+    return Promise.resolve();
 }
 
 

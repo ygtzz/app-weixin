@@ -7,7 +7,7 @@
                 </div>
                 <div class="right">
                     <ul class="list">
-                        <li class="item" v-for="item in aMenu">{{item.title}}</li>
+                        <li class="item" v-for="item in aMenu" @click="fLinkClick(item)">{{item.title}}</li>
                     </ul>
                 </div>
             </div>
@@ -23,6 +23,7 @@
     </div>    
 </template>
 <script>
+import {mapActions} from 'vuex';
 import chatbar from './chatbar.vue';
 
 export default {
@@ -38,8 +39,18 @@ export default {
         }
     },
     methods: {
+        ...mapActions([
+            'set_iframe_url'
+        ]),
         fSwitchWay(){
             this.way = this.way == 'menu' ? 'chat' : 'menu';
+        },
+        fLinkClick(item){
+            if(item.url){
+                this.set_iframe_url(item).then(()=>{
+                    this.$router.push({path:'/weixin/room/link'})
+                });
+            }
         }
     },
     components:{

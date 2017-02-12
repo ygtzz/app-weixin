@@ -30,7 +30,6 @@ export default {
         return{
             topModel:{
                 backText:'微信',
-                backPath:'/weixin/room',
                 curText:'',
                 nextPath:'',
                 nextIcon:''

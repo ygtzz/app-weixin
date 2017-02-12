@@ -87,7 +87,6 @@ const mutations = {
         chatMemberModel,
         chatConfigModel
     }) {
-        console.log(base)
         state.dialogue_type = base.type;
         state.chat_base = base;
         state.dialogue = chatDialogueModel
