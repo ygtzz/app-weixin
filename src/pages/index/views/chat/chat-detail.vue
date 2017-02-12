@@ -1,7 +1,7 @@
 <template>
     <div class="stage c">
         <header class="header">
-            <c-cHeader @leftClick="fHeaderLeftClick" :bBack="true" :backText="topModel.backText" :midText="topModel.curText">
+            <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText">
             </c-cHeader>
         </header>
         <section class="body">
@@ -129,12 +129,7 @@ export default {
         }
     },
     methods:{
-        fHeaderLeftClick(){
-            location.hash = this.topModel.backPath;
-        },
-        fHeaderRightClick(){
-            location.hash = this.topModel.nextPath;
-        }
+     
     },
     components:{
 

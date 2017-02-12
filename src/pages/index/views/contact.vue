@@ -58,6 +58,9 @@
                 </div>
             </li>
         </ul>
+        <transition name="cover">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 <script>
@@ -84,9 +87,9 @@ export default {
             set_menu_active:'set_menu_active'
         }),
         go_personInfo(id){
-            this.get_person_info(id,()=>{
-                this.$router.go({'path':'/contact/person-info'})
-            })
+            this.get_person_info(id).then(()=>{
+                this.$router.push({'path':'/contact/person-info'})
+            });
         }
     },
     components:{

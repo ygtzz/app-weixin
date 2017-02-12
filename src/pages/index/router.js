@@ -6,6 +6,8 @@ import chatroom from './views/chat/chat-room.vue';
 import chatdetail from './views/chat/chat-detail.vue';
 import chatinfo from './views/chat/chat-info.vue';
 import link from './widget/iframe.vue';
+import personInfo from './views/contact/person-info.vue';
+import personInfoSet from './views/contact/person-info-set.vue';
 
 export default [
     { path: '/', component: weixin },
@@ -21,7 +23,16 @@ export default [
           }
       ]
     },
-    { path: '/contract', component: address,name:'contact' },
+    { path: '/contact', component: address,name:'contact',
+      children:[
+          {
+            path:'person-info',component:personInfo,name:'personInfo',
+            children:[
+                    {path:'set',component:personInfoSet,name:'personInfoSet'}
+            ]
+         }
+      ]
+    },
     { path: '/find', component: find,name:'find'},
     { path: '/me', component: me,name:'me'}
 ];

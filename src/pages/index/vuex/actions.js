@@ -32,7 +32,7 @@ export const set_chat = ({ commit }, model) => {
 export const get_person_info = ({ commit }, id, fn) => {
     let info = require('../mock/person-info-' + id)
     commit('PERSON_INFO', info)
-    !!fn && fn()
+    return Promise.resolve();
 }
 export const get_friends_list = ({ commit }, id) => {
     let friends = require('../mock/contact')
