@@ -1,8 +1,8 @@
 <template>
     <div class="header">
         <div @click="fLeftClick" class="left">
-            <i v-show="bBack" class="iconfont icon-return-arrow" ></i>
-            <span v-text="backText" class="text"></span>
+            <i v-show="bBack" class="iconfont icon-return-arrow" ></i><!--
+            --><span v-text="backText" class="text"></span>
         </div>
         <div class="mid">
             <span v-text="midText" class="text"></span><slot></slot>

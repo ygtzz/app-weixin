@@ -1,22 +1,22 @@
 <template>
-    <div class="stage con">
-        <header class="header">
-            <c-cHeader @leftClick="fHeaderLeftClick" :bBack="true" :backText="topModel.backText" :midText="topModel.curText"
-                       @rightClick="fHeaderRightClick" :rightIcon="topModel.nextIcon">
-                <span class="member" v-show="dialogue_type==='group'">({{chat_member.length}})</span>
-                <span class="iconfont icon-mute" v-show='topModel.isMute'></span>
-            </c-cHeader>
-        </header>
-        <section class="body">
-            
-        </section>
-        <footer class="footer">
-            <c-chatbar v-if="dialogue_type!='service'"></c-chatbar>        
-            <c-chatlinkbar v-if="dialogue_type=='service'" :aMenu="dialogue_bar.menu"></c-chatlinkbar>
-        </footer>
-        <transition name="cover">
-            <router-view></router-view>  
-        </transition>
+    <div class="stage c">
+        <ul class="list">
+            <li class="item item_head">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        <p class="title">yangtao</p>
+                        <p class="desc">微信号：wxid_yangtao</p>
+                    </div>
+                    <div class="item-other">
+                        <c-imgHolder class="qr" src="static/images/chat-info-qr.png"></c-imgHolder>
+                        <i class="fa fa-angle-right"></i> 
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </template>
 <script>
@@ -25,7 +25,7 @@ import chatbar from 'index/widget/chatbar.vue';
 import chatlinkbar from 'index/widget/chatlinkbar.vue';
 
 export default {
-    name:'c-chatroom',
+    name:'c-chatdetail',
     data(){
         return{
             topModel:{
@@ -86,8 +86,11 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-    .con{display:flex;flex-direction:column}
-    .body{flex:1}
-    .member{font-size:18px;}
-    .icon-mute{font-size: 12px !important;color:#878689;}
+    .list{margin-top:22px}
+   .item{padding:0 15px;background-color:#fff;}
+   .item-i{padding:9px 0;display:flex;align-items:center;}
+   .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
+   .item-img{width:20px;height:20px;margin-right:5px}
+   .item-info{font-size:17px;flex:1}
+   .item-other{font-size:22px;color:#c8c8cd}
 </style>
