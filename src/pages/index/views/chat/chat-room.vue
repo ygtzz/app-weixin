@@ -1,8 +1,8 @@
 <template>
     <div class="stage con">
         <header class="header">
-            <c-cHeader @leftClick="fHeaderLeftClick" :bBack="true" :backText="topModel.backText" :midText="topModel.curText"
-                       @rightClick="fHeaderRightClick" :rightIcon="topModel.nextIcon">
+            <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText"
+                       :rightIcon="topModel.nextIcon" :rightPath="topModel.nextPath">
                 <span class="member" v-show="dialogue_type==='group'">({{chat_member.length}})</span>
                 <span class="iconfont icon-mute" v-show='topModel.isMute'></span>
             </c-cHeader>
@@ -72,12 +72,6 @@ export default {
         }
     },
     methods:{
-        fHeaderLeftClick(){
-            location.hash = this.backPath;
-        },
-        fHeaderRightClick(){
-            location.hash = this.topModel.nextPath;
-        }
     },
     components:{
         'c-chatbar':chatbar,

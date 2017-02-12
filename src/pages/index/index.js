@@ -27,6 +27,12 @@ const router = new VueRouter({
     routes:routeConfig
 });
 
+router.beforeEach((to, from, next) => {
+  store.commit('BACK_PATH', from.fullPath)
+  next();
+});
+
+
 sync(store, router);
 
 new Vue({

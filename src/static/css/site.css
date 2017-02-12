@@ -27,3 +27,8 @@ ul,li,p{margin:0;padding:0}
     transform: translate3d(100%,0,0);
     opacity: .98;
 }
+/*ele rewrite*/
+.mint-switch-input:checked + .mint-switch-core {
+    border-color: #04be02 !important;
+    background-color: #04be02 !important;
+}

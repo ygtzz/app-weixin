@@ -13,6 +13,8 @@
     </div>
 </template>
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
     name:'c-cHeader',
     data(){
@@ -36,14 +38,29 @@ export default {
         },
         rightIcon:{
             type:String
+        },
+        rightPath:{
+            type:String
         }
+    },
+    computed:{
+        ...mapGetters([
+            'backPath'
+        ])
     },
     methods:{
         fLeftClick(){
-            this.$emit('leftClick');
+            if(this.backPath.path){
+                this.$router.push(this.backPath.path);
+            }
         },
         fRightClick(){
-            this.$emit('rightClick');
+            if(this.rightPath){
+                this.$router.push(this.rightPath);  
+            }
+            else{
+                this.$emit('rightClick')
+            }
         }
     }
 }
@@ -57,18 +74,17 @@ export default {
         display:flex;
         align-items:center;
         padding:0 15px;
-        i,.iconfont{font-size:22px;}
+        i,.iconfont{font-size:18px;}
         font-size:18px;
     }
     .left{
         text-align:left;
-
+        font-size:16px;
     }
     .right{text-align:right;}
     .left,.right{width:80px;overflow:hidden;word-wrap:break-word;}
     .mid{
         flex:1;
         text-align:center;
-     
     }
 </style>

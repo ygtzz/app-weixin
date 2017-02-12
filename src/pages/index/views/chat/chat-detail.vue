@@ -5,17 +5,13 @@
             </c-cHeader>
         </header>
         <section class="body">
-            <ul class="list">
-                <li class="item ">
-                    <div class="item-i">
-                        <div class="item-img">
-                            <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
-                            <p>杨涛</p>
-                        </div>
-                        <div class="item-info">
-                            <div class="jia">+</div>
-                        </div>
-                    </div>
+            <ul class="userlist">
+                <li class="item">
+                    <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
+                    <p class="user-name">杨涛</p>
+                </li>
+                <li class="item">
+                    <div class="jia"><span class="iconfont icon-chat-detail-add"></span></div>
                 </li>
             </ul>
             <ul class="list">
@@ -102,6 +98,7 @@
     </div>
 </template>
 <script>
+import Vue from 'vue';
 import {Switch} from 'mint-ui';
 Vue.component(Switch.name,Switch);
 
@@ -145,11 +142,18 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+    .userlist{display:flex;
+              background:#fff;padding:15px;
+              .item{width:55px;}}
+    .user-name{text-align:center;}
+    .jia{border:1px solid #ccc;width:55px;height:55px;text-align:center;line-height:55px;border-radius:4px;
+    .iconfont{font-size:40px;color:#ccc}}
+    :global(.imgHolder img){border-radius:4px}
     .list{margin-top:22px}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
-   .item-img{width:20px;height:20px;margin-right:5px}
+   .item-img{width:55px;height:75px;margin-right:5px}
    .item-info{font-size:17px;flex:1}
    .item-other{font-size:22px;color:#c8c8cd}
 </style>

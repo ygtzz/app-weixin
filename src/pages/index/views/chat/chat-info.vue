@@ -1,96 +1,246 @@
 <template>
     <div class="stage c">
-        <ul class="list">
-            <li class="item item_head">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
+        <header class="header">
+            <c-cHeader @leftClick="fHeaderLeftClick" :bBack="true" :backText="topModel.backText" :midText="topModel.curText">
+            </c-cHeader>
+        </header>
+        <section class="body">
+            <ul class="userlist">
+                <li class="item">
+                    <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
+                    <p class="user-name">yangtao...</p>
+                </li>
+                <li class="item">
+                    <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
+                    <p class="user-name">yangtao...</p>
+                </li>
+                <li class="item">
+                    <div class="jia"><span class="iconfont icon-chat-detail-add"></span></div>
+                </li>
+            </ul>
+            <ul class="list">
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            群聊名称
+                        </div>
+                        <div class="item-other">
+                            微信群01
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
                     </div>
-                    <div class="item-info">
-                        <p class="title">yangtao</p>
-                        <p class="desc">微信号：wxid_yangtao</p>
+                </li>
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            群聊二维码
+                        </div>
+                        <div class="item-other qr">
+                            <c-imgHolder src="static/images/chat-info-qr.png"></c-imgHolder>
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
                     </div>
-                    <div class="item-other">
-                        <c-imgHolder class="qr" src="static/images/chat-info-qr.png"></c-imgHolder>
-                        <i class="fa fa-angle-right"></i> 
+                </li>
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            <p>群公告</p>
+                            <p class="notice _ellipsis-3">
+                                迎接新的一天到来的不是别的迎接新的一天到来的不是别的迎接新的一天到来的不是别的迎接新的天到来的不是别的迎接新的一天到来的不是别的,而是看!邮!件!
+                            </p>
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+            <ul class="list">
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            消息免打扰
+                        </div>
+                        <div class="item-other">
+                            <mt-switch v-model="bNoTrouble"></mt-switch>
+                        </div>
+                    </div>
+                </li>
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            置顶聊天
+                        </div>
+                        <div class="item-other">
+                            <mt-switch v-model="bSetTop"></mt-switch>
+                        </div>
+                    </div>
+                </li>
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            保存到通讯录
+                        </div>
+                        <div class="item-other">
+                            <mt-switch v-model="bSaveToContact"></mt-switch>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list">
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            我在本群的昵称
+                        </div>
+                        <div class="item-other">
+                            杨涛——前端
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
+                    </div>
+                </li>
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            显示成员昵称
+                        </div>
+                        <div class="item-other">
+                            <mt-switch v-model="bShowGroupMemberNick"></mt-switch>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list">
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            聊天文件
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
+                    </div>
+                </li>
+                <li class="item ">                
+                    <div class="item-i">
+                        <div class="item-info">
+                            查找聊天内容
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
+                    </div>
+                </li>
+                <li class="item ">                
+                    <div class="item-i">
+                        <div class="item-info">
+                            设置当前聊天背景
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
+                    </div>
+                </li>
+                <li class="item ">                
+                    <div class="item-i">
+                        <div class="item-info">
+                            投诉
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list">
+                <li class="item ">
+                    <div class="item-i">
+                        <div class="item-info">
+                            清空聊天记录
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i> 
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="btnwrap">
+                <button class="btn btn-red">删除并且退出</button>
+            </div>
+        </section>
     </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'; 
-import chatbar from 'index/widget/chatbar.vue';
-import chatlinkbar from 'index/widget/chatlinkbar.vue';
+import Vue from 'vue';
+import {Switch} from 'mint-ui';
+Vue.component(Switch.name,Switch);
 
 export default {
     name:'c-chatdetail',
     data(){
         return{
             topModel:{
-                backText:'微信',
+                backText:'返回',
                 backPath:'/weixin/room',
-                curText:'',
+                curText:'聊天详情',
                 nextPath:'',
                 nextIcon:''
-            }
+            },
+            bSetTop:false,
+            bNoTrouble:false,
+            bSaveToContact:true,
+            bShowGroupMemberNick:true
         }
     },
     computed:{
-        ...mapGetters([
-            'chat_base',
-            'dialogue_type',
-            'dialogue',
-            'dialogue_bar',
-            'chat_member',
-            'chat_config',
-            'backPath'
-        ])
+        
     },
     watch:{
         '$route':{
             handler(){
-                //icon
-                this.topModel.nextIcon = 'icon-chat-' + this.dialogue_type
-                this.topModel.curText = this.chat_base.name
-                //bar
-                this.topModel.isMute = this.chat_config.newsMute
-                //nextPath
-                let nextPath = '';
-                let roleType = this.dialogue_type;
-                if (roleType === 'group') {
-                    nextPath = '/weixin/room/chat-info'
-                } else if (roleType === 'friends') {
-                    nextPath = '/weixin/room/chat-detail'
-                } else if (roleType === 'service') {
-                    nextPath = ''
-                }
-                this.topModel.nextPath = nextPath
+                
             },
             immediate:true
         }
     },
     methods:{
         fHeaderLeftClick(){
-            location.hash = this.backPath;
+            location.hash = this.topModel.backPath;
         },
         fHeaderRightClick(){
             location.hash = this.topModel.nextPath;
         }
     },
     components:{
-        'c-chatbar':chatbar,
-        'c-chatlinkbar':chatlinkbar
+
     }
 }
 </script>
 <style lang="sass" scoped>
+    .c{display:flex;flex-direction:column;height:100%;overflow:hidden;}
+    .body{flex:1;overflow:auto;padding-bottom:30px;}
+    .userlist{display:flex;
+              background:#fff;padding:15px;
+              .item{width:55px;}}
+    .user-name{text-align:center;}
+    .jia{border:1px solid #ccc;width:55px;height:55px;text-align:center;line-height:55px;border-radius:4px;
+    .iconfont{font-size:40px;color:#ccc}}
+    :global(.imgHolder img){border-radius:4px}
     .list{margin-top:22px}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
-   .item-img{width:20px;height:20px;margin-right:5px}
+   .item-img{width:55px;height:75px;margin-right:5px}
    .item-info{font-size:17px;flex:1}
-   .item-other{font-size:22px;color:#c8c8cd}
+   .item-other{font-size:17px;color:#c8c8cd}
+   .notice{color:#888;font-size:16px;line-height:1.5;padding-right:5px;}
+   ._ellipsis-3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    :global(.qr .imgHolder){width:24px;height:24px;display:inline-block}
+    .btnwrap{margin-top:18px;text-align:center;.btn{width:70%}}
 </style>
