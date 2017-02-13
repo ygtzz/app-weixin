@@ -1,5 +1,5 @@
 <template>
-    <div class="stage">
+    <div class="stage c">
         <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText"
                        :rightIcon="topModel.nextIcon" :rightPath="topModel.nextPath.path">
         </c-cHeader>
@@ -72,12 +72,12 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-   .list{margin-top:22px}
+   .list{margin-top:22px;font-size:17px;}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:20px;height:20px;margin-right:15px}
-   .item-info{flex:1}
+   .item-info{flex:1;}
    .item-other{font-size:22px;color:#c8c8cd}
    .item_head{
        .item-img{width:60px;height:60px;}

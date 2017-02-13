@@ -89,7 +89,7 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-   .list{margin-top:22px}
+   .list{margin-top:22px;font-size:17px;}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
