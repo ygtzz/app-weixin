@@ -10,6 +10,7 @@ import personInfo from './views/contact/person-info.vue';
 import personInfoSet from './views/contact/person-info-set.vue';
 import newFriends from './views/contact/new-friends.vue';
 import addFriends from './views/contact/add-friends.vue';
+import groupChat from './views/contact/group-chat.vue';
 
 export default [
     { path: '/', component: weixin },
@@ -41,6 +42,9 @@ export default [
          },
          {
             path:'add-friends',component:addFriends,name:'addFriends'
+         },
+         {
+            path:'group-chat',component:groupChat,name:'groupChat'
          }
       ]
     },
