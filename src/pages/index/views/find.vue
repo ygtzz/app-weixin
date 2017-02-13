@@ -2,60 +2,68 @@
     <div>
         <ul class="list">
             <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/find_icon-circle.png"></c-imgHolder>
+                <router-link :to="{name:'yao-yi-yao'}">
+                    <div class="item-i">
+                        <div class="item-img">
+                            <c-imgHolder src="static/images/find_icon-circle.png"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
+                            朋友圈
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i>                    
+                        </div>
                     </div>
-                    <div class="item-info">
-                        朋友圈
-                    </div>
-                    <div class="item-other">
-                        <i class="fa fa-angle-right"></i>                    
-                    </div>
-                </div>
+                </router-link>
             </li>
         </ul>
         <ul class="list">
             <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/find_icon-qrcode.png"></c-imgHolder>
+                <router-link :to="{name:'yao-yi-yao'}">
+                    <div class="item-i">
+                        <div class="item-img">
+                            <c-imgHolder src="static/images/find_icon-qrcode.png"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
+                            扫一扫
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i>                    
+                        </div>
                     </div>
-                    <div class="item-info">
-                        扫一扫
-                    </div>
-                    <div class="item-other">
-                        <i class="fa fa-angle-right"></i>                    
-                    </div>
-                </div>
+                </router-link>
             </li>
             <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/find_icon-shake.png"></c-imgHolder>
+                <router-link :to="{name:'yao-yi-yao'}">
+                    <div class="item-i">
+                        <div class="item-img">
+                            <c-imgHolder src="static/images/find_icon-shake.png"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
+                            摇一摇
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i>                    
+                        </div>
                     </div>
-                    <div class="item-info">
-                        摇一摇
-                    </div>
-                    <div class="item-other">
-                        <i class="fa fa-angle-right"></i>                    
-                    </div>
-                </div>
+                </router-link>
             </li>
         </ul>
         <ul class="list">
             <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/find_icon-bottle.png"></c-imgHolder>
+                <router-link :to="{name:'yao-yi-yao'}">
+                    <div class="item-i">
+                        <div class="item-img">
+                            <c-imgHolder src="static/images/find_icon-bottle.png"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
+                            漂流瓶
+                        </div>
+                        <div class="item-other">
+                            <i class="fa fa-angle-right"></i>                    
+                        </div>
                     </div>
-                    <div class="item-info">
-                        漂流瓶
-                    </div>
-                    <div class="item-other">
-                        <i class="fa fa-angle-right"></i>                    
-                    </div>
-                </div>
+                </router-link>
             </li>
         </ul>
         <ul class="list">
@@ -86,6 +94,9 @@
                 </div>
             </li>
         </ul>
+        <transition name="cover">
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 <script>

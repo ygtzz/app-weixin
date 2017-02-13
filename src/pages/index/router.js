@@ -11,6 +11,7 @@ import personInfoSet from './views/contact/person-info-set.vue';
 import newFriends from './views/contact/new-friends.vue';
 import addFriends from './views/contact/add-friends.vue';
 import groupChat from './views/contact/group-chat.vue';
+import yaoyiyao from './views/find/yao-yi-yao.vue';
 
 export default [
     { path: '/', component: weixin },
@@ -48,6 +49,10 @@ export default [
          }
       ]
     },
-    { path: '/find', component: find,name:'find'},
+    { path: '/find', component: find,name:'find',
+      children:[
+          { path: 'yao-yi-yao', component: yaoyiyao,name:'yao-yi-yao'}
+      ]
+    },
     { path: '/me', component: me,name:'me'}
 ];
