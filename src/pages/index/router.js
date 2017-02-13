@@ -8,6 +8,8 @@ import chatinfo from './views/chat/chat-info.vue';
 import link from './widget/iframe.vue';
 import personInfo from './views/contact/person-info.vue';
 import personInfoSet from './views/contact/person-info-set.vue';
+import newFriends from './views/contact/new-friends.vue';
+import addFriends from './views/contact/add-friends.vue';
 
 export default [
     { path: '/', component: weixin },
@@ -25,11 +27,20 @@ export default [
     },
     { path: '/contact', component: address,name:'contact',
       children:[
-          {
+         {
             path:'person-info',component:personInfo,name:'personInfo',
             children:[
-                    {path:'set',component:personInfoSet,name:'personInfoSet'}
+                {path:'set',component:personInfoSet,name:'personInfoSet'}
             ]
+         },
+         {
+            path:'new-friends',component:newFriends,name:'newFriends',
+            children:[
+                {path:'add',component:addFriends,name:'new-addFriends'}
+            ]
+         },
+         {
+            path:'add-friends',component:addFriends,name:'addFriends'
          }
       ]
     },

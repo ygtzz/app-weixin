@@ -2,43 +2,13 @@
     <div>
         <c-searchbar></c-searchbar>
         <ul class="contact-head">
-            <li class="item">
+            <li class="item" v-for="item in aHead" @click="fHeadClick(item)">
                 <div class="item-i">
                     <div class="item-img">
-                        <c-imgHolder src="static/images/contact_top-friend-notify.png"></c-imgHolder>
+                        <c-imgHolder :src="item.imgUrl"></c-imgHolder>
                     </div>
                     <div class="item-info">
-                        新的朋友
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/contact_top-addgroup.png"></c-imgHolder>
-                    </div>
-                    <div class="item-info">
-                        群聊
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/contact_top-tag.png"></c-imgHolder>
-                    </div>
-                    <div class="item-info">
-                        标签
-                    </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="static/images/contact_top-offical.png"></c-imgHolder>
-                    </div>
-                    <div class="item-info">
-                        公众号
+                        {{item.text}}
                     </div>
                 </div>
             </li>
@@ -73,6 +43,16 @@ export default {
         this.get_friends_list()
         this.set_menu_active(1)
     },
+    data(){
+        return {
+            aHead:[
+                {text:'新的朋友',imgUrl:'static/images/contact_top-friend-notify.png',type:'new',url:'/contact/new-friends'},
+                {text:'群聊',imgUrl:'static/images/contact_top-addgroup.png',type:'group',url:'/contact/group-chat'},
+                {text:'标签',imgUrl:'static/images/contact_top-tag.png',type:'mark',url:'/contact/new-friends'},
+                {text:'公众号',imgUrl:'static/images/contact_top-offical.png',type:'account',url:'/contact/new-friends'}                
+            ]
+        }
+    },
     computed:{
         ...mapGetters({
             contact_friends:'contact_friends'
@@ -90,6 +70,9 @@ export default {
             this.get_person_info(id).then(()=>{
                 this.$router.push({'path':'/contact/person-info'})
             });
+        },
+        fHeadClick(item){
+            this.$router.push({path:item.url});
         }
     },
     components:{
