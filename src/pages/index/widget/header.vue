@@ -1,9 +1,7 @@
 <template>
     <div class="header">
-        <span class="nav-text">微信(12)</span>
-        <span @click="fNavAddClick" class="jia-wrap">
-            <i class="iconfont icon-tips-jia jia"></i>
-        </span>
+        <c-cHeader ref="cHeader" :bBack="false" :midText="header.midText" :rightIcon="header.rightIcon" :rightPath="header.rightPath">
+        </c-cHeader>
         <ul class="tips-menu" :class="{'tips-close':bMenuClose}">
             <li class="tip-item"><i class="iconfont icon-tips-xiaoxi"></i>发起群聊</li>
             <li class="tip-item"><i class="iconfont icon-tips-add-friend"></i>添加朋友</li>
@@ -13,17 +11,59 @@
     </div>
 </template>
 <script>
+import cHeader from './cHeader.vue';
+
 export default {
     name:'c-header',
+    mounted(){
+        var self = this;
+        if(this.$route.path == '/weixin'){
+            this.$refs.cHeader.$on('rightClick',function(){
+                self.bMenuClose = !self.bMenuClose;
+            })
+        }
+    },
     data(){
         return {
-            bMenuClose:true            
+            bMenuClose:true,
+            header:{}
+        }
+    },
+    watch:{
+        '$route':{
+            handler:function(){
+                 const path = this.$route.path,
+                  map = {
+                        '/':{
+                            midText:'微信(12)',
+                            rightIcon:'iconfont icon-tips-jia'
+                        },
+                        '/weixin':{
+                            midText:'微信(12)',
+                            rightIcon:'iconfont icon-tips-jia'
+                        },
+                        '/contact':{
+                            midText:'通讯录',
+                            rightIcon:'iconfont icon-tips-add-friend',
+                            rightPath:'/contact/add-friends'
+                        },
+                        '/find':{
+                            midText:'发现'
+                        },
+                        '/me':{
+                            midText:'我'
+                        }
+                    };
+                this.header = map[path] || {};
+            },
+            immediate:true
         }
     },
     methods:{
-        fNavAddClick(){
-            this.bMenuClose = !this.bMenuClose;
-        }
+    
+    },
+    components:{
+        'c-cHeader':cHeader
     }
 }
 </script>
