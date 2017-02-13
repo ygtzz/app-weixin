@@ -1,72 +1,90 @@
 <template>
     <div class="stage c">
-        <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText"
-                       :rightIcon="topModel.nextIcon" :rightPath="topModel.nextPath.path">
+        <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText">
         </c-cHeader>
-        add-friends
+        <div class="input">
+            <span class="iconfont icon-search"></span><!--
+            --><input type="text" placeholder="微信号/手机号"/>
+        </div>
+        <div class="weixin">
+            我的的微信号:xxxxxx_2008
+            <div class="img">
+                <c-imgHolder src="static/images/contact_add-friend-my-qr.png"></c-imgHolder>
+            </div>
+        </div>
         <ul class="list">
-            <li class="item item_head">
+            <li class="item">
                 <div class="item-i">
                     <div class="item-img">
-                        <c-imgHolder src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
+                        <c-imgHolder src="/static/images/contact_add-friend-reda.png"></c-imgHolder>
                     </div>
                     <div class="item-info">
-                        <p class="title">阿涛<span class="gender gender-man"></span></p>
-                        <p class="desc">微信号：wxid_yangtao</p>
-                        <p class="nick">杨涛</p>
+                        <p class="title">雷达加朋友</p>
+                        <p class="desc">添加身边的朋友</p>
                     </div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="/static/images/contact_add-friend-addgroup.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        <p class="title">面对面建群</p>
+                        <p class="desc">与身边的朋友进入同一个群聊</p>
+                    </div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="/static/images/contact_add-friend-scanqr.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        <p class="title">扫一扫</p>
+                        <p class="desc">扫描二维码名片</p>
+                    </div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="/static/images/contact_add-friend-contacts.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        <p class="title">手机联系人</p>
+                        <p class="desc">添加通讯录中的朋友</p>
+                    </div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item-i">
+                    <div class="item-img">
+                        <c-imgHolder src="/static/images/contact_add-friend-offical.png"></c-imgHolder>
+                    </div>
+                    <div class="item-info">
+                        <p class="title">公众号</p>
+                        <p class="desc">获得更多资讯和服务</p>
+                    </div>
+                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
                 </div>
             </li>
         </ul>
-        <ul class="list">
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-info">设置备注和标签</div>
-                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-info">电话号码</div>
-                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
-                </div>
-            </li>
-        </ul>
-        <ul class="list">
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-info">地区</div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-info photo">个人相册</div>
-                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
-                </div>
-            </li>
-            <li class="item">
-                <div class="item-i">
-                    <div class="item-info">更多</div>
-                    <div class="item-other"><i class="fa fa-angle-right"></i> </div>
-                </div>
-            </li>
-        </ul>
-        <transition name="cover">
-            <router-view></router-view>  
-        </transition>
     </div>
 </template>
 <script>
 
 export default {
-    name:'c-person-info',
+    name:'c-add-friends',
     data(){
         return {
              topModel:{
                 backText:'通讯录',
-                curText:'新的朋友',
-                nextPath:{path:'/contact/person-info/set',append:true},
-                nextIcon:'icon-more'
+                curText:'添加朋友'
             }           
         }
     }
@@ -77,24 +95,20 @@ export default {
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
-   .item-img{width:20px;height:20px;margin-right:15px}
-   .item-info{flex:1;}
+   .item-img{width:35px;height:35px;margin-right:15px}
+   .item-info{flex:1;line-height:1.41}
    .item-other{font-size:22px;color:#c8c8cd}
-   .item_head{
-       .item-img{width:60px;height:60px;}
-       .item-info{font-size: 14px;color: #888;line-height:1.4;}
-       :global(.imgHolder img){border-radius:4px;border: 1px solid #ccc}   
+   .title{font-size:15px;}
+   .desc{font-size:12px;color:#b7b7b7;}
+   .input{
+        width:100%;
+        padding:10px 30px;background:#fff;margin-top:20px;
+        border-top: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        .iconfont{color: #40b938;}
+        input{border:0;width:80%;padding:5px 4px;font-size:16px;vertical-align:middle}
    }
-   .photo{padding:20px 0;}
-   .gender-man{
-    display:inline-block;
-    width:20px;
-    height:20px;
-    vertical-align:-3px;
-    margin-left:10px;
-    background-image: url(/static/images/contact_male.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;}
-    .title{font-size:18px;}
+   .weixin{margin-top:10px;text-align:center;font-size:17px}
+   .img{width:24px;height:24px;display:inline-block;}
+   :global(.imgHolder img){vertical-align: middle;}
 </style>

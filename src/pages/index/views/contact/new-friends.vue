@@ -59,7 +59,7 @@
 import searchBar from 'index/widget/searchbar.vue';
 
 export default {
-    name:'c-person-info',
+    name:'c-new-friends',
     data(){
         return {
              topModel:{
