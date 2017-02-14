@@ -94,8 +94,10 @@ export default {
    .item-info{font-size:17px;flex:1}
    .item-other{font-size:22px;color:#c8c8cd}
    .item_head{
-       .item-img{width:60px;height:60px;}
-       :global(.imgHolder img){border-radius:4px;border: 1px solid #ccc}   
+       .item-img{
+            width:60px;height:60px;
+            :global(.imgHolder img){border-radius:4px;border: 1px solid #ccc}           
+       }
    }
    .title{font-size:18px;color:#111;line-height:25px;}
    .desc{font-size:14px}
