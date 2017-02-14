@@ -1,20 +1,24 @@
 <template>
     <div class="stage c">
-        <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText">
-        </c-cHeader>
-        <c-searchbar></c-searchbar>
-        <ul class="list">
-            <li class="item" v-for="item in aGroup">
-                <div class="item-i">
-                    <div class="item-img">
-                        <c-imgHolder src="//images2015.cnblogs.com/blog/528573/201609/528573-20160922181803449-1753077357.jpg"></c-imgHolder>
+        <div class="header">
+            <c-cHeader :bBack="true" :backText="topModel.backText" :midText="topModel.curText">
+            </c-cHeader>
+        </div>
+        <section class="body">
+            <c-searchbar></c-searchbar>
+            <ul class="list">
+                <li class="item" v-for="item in aGroup">
+                    <div class="item-i">
+                        <div class="item-img">
+                            <c-imgHolder src="//images2015.cnblogs.com/blog/528573/201609/528573-20160922181803449-1753077357.jpg"></c-imgHolder>
+                        </div>
+                        <div class="item-info">
+                            {{item}}
+                        </div>
                     </div>
-                    <div class="item-info">
-                        {{item}}
-                    </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </section>
     </div>
 </template>
 <script>
@@ -39,6 +43,8 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+   .c{height:100%;overflow:hidden;display:flex;flex-direction:column}
+   .body{flex:1;overflow:auto;}
    .list{font-size:17px;}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
