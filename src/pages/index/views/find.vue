@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="c">
         <ul class="list">
             <li class="item">
                 <router-link :to="{name:'yao-yi-yao'}">
@@ -105,6 +105,9 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+   .c{
+       a:link,a:visited,a:hover,a:active{color:#000}
+    }
    .list{margin-top:22px}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
