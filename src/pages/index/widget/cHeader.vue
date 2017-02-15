@@ -76,6 +76,7 @@ export default {
         padding:0 15px;
         i,.iconfont{font-size:18px;}
         font-size:18px;
+        transform:rotate(0)
     }
     .left{
         text-align:left;
