@@ -39,15 +39,15 @@ export default {
    .body{flex:1;display:flex;align-items:flex-end;justify-content:center;background:url(/static/images/drift-bottle/bottle-bkg.jpg);background-size:cover;}
    .footer{width:100%;text-align:center;background:url(/static/images/drift-bottle/bottle-board.png);background-size:contain;background-repeat:no-repeat;background-position:left bottom;}
    .item{text-align:center;display:inline-block;&:not(:last-child){margin-right:50px;}}
-   .img{width:42px;height:40px;background-size:cover}
-   .desc{margin-top:20px;}
+   .img{width:70px;height:70px;background-size:cover}
+   .desc{margin-top:10px;color:#fff;font-size:16px;line-height:1.6}
    .drift{
-        background-image:url(/static/img/bottle-button-throw.16ea5dc.png);
+        background-image:url(/static/images/drift-bottle/bottle-button-throw.png);
    }
    .pick{
-        background-image:url(/static/images/yao-yi-yao/shake_icon_music.png);
+        background-image:url(/static/images/drift-bottle/bottle-button-fish.png);
    }
    .me{
-        background-image:url(/static/images/yao-yi-yao/shake_icon_tv.png);
+        background-image:url(/static/images/drift-bottle/bottle-button-mine.png);
    }
 </style>
