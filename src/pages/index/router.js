@@ -12,6 +12,7 @@ import newFriends from './views/contact/new-friends.vue';
 import addFriends from './views/contact/add-friends.vue';
 import groupChat from './views/contact/group-chat.vue';
 import yaoyiyao from './views/find/yao-yi-yao.vue';
+import driftBottle from './views/find/drift-bottle.vue';
 
 export default [
     { path: '/', component: weixin },
@@ -51,7 +52,8 @@ export default [
     },
     { path: '/find', component: find,name:'find',
       children:[
-          { path: 'yao-yi-yao', component: yaoyiyao,name:'yao-yi-yao'}
+          { path: 'yao-yi-yao', component: yaoyiyao,name:'yao-yi-yao'},
+          { path: 'drift-bottle', component: driftBottle,name:'drift-bottle'},          
       ]
     },
     { path: '/me', component: me,name:'me'}
