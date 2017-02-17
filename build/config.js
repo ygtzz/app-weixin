@@ -25,5 +25,27 @@ module.exports = {
             script: '/static/scripts/',
             style: '/static/style/'
         }
+    },
+    designWidth:750,
+    baseSize:16,
+    enableRem:true,
+    // postcss-plugin-px2rem 的配置，详细描述参考：https://github.com/ant-tool/postcss-plugin-px2rem
+    px2remOptions: {
+        rootValue: 750 / 16,
+        unitPrecision: 5,
+        propWhiteList: [],
+        propBlackList: ['font-size','border-top','border-bottom','border'],
+        selectorBlackList: ['ignore'],
+        ignoreIdentifier: false,
+        replace: true,
+        mediaQuery: false,
+        minPixelValue: 0
+    },
+    px2rem:{
+        remUnit:750 / 16,
+        threeVersion:false,
+        remVersion:true,
+        baseDpr:1,
+        remPrecision:6
     }
 }

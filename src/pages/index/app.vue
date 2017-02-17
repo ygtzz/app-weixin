@@ -31,7 +31,9 @@ export default {
 } 
 </script>
 <style lang="sass" scoped>
-    #app{height:100%;width:100%;}
+    #app{
+        height:100%;width:100%;
+    }
     .container{
         height:100%;width:100%;
         overflow:hidden;

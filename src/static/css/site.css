@@ -1,7 +1,7 @@
 html,body{
     height:100%;
     width:100%;
-    font-size:14px;
+    overflow:hidden;
     font-family:Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
 }
 html * {
@@ -9,6 +9,19 @@ html * {
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+/*font-size*/
+[data-dpr="1"] body {
+    font-size: 14px
+}
+
+[data-dpr="2"] body {
+    font-size: 28px
+}
+
+[data-dpr="3"] body {
+    font-size: 42px
+}
+/*global*/
 ul{list-style:none;}
 ul,li,p{margin:0;padding:0}
 .dot{background-color:#f43531;border-radius:50%;position:absolute;z-index:2;}

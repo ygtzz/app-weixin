@@ -2,7 +2,17 @@ var webpack = require('webpack');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var config = require('./config');
+var merge = require('lodash/merge');
 var sBase = config.sBase;
+
+var aPlugin = [];
+if(config.enableRem){
+    //aPlugin.push(require('./plugins/headInjectPlugin'));
+}
+var aPostcss = [autoprefixer({browsers: ['> 5%','ie 9']})];
+if(config.enableRem){
+    aPostcss.push(require('postcss-plugin-px2rem')(config.px2remOptions))
+}
 
 module.exports = {
     entry: config.entry,
@@ -36,8 +46,9 @@ module.exports = {
             }
         ]
     },
+    plugins: aPlugin,
     postcss: function () {
-        return [autoprefixer({browsers: ['> 5%','ie 9']})]
+        return aPostcss;
     },
     vue: {
         loaders: {

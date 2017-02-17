@@ -8,7 +8,7 @@
             <span v-text="midText" class="text"></span><slot></slot>
         </div>
         <div @click="fRightClick" class="right">
-            <span :class="['iconfont',rightIcon]"></span>        
+            <span :class="[rightIcon]"></span>        
         </div>
     </div>
 </template>
@@ -66,21 +66,39 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
+    [data-dpr="1"]{
+        .left{font-size: 16px}
+        .header{
+            i,.iconfont{font-size:18px;}
+            font-size:18px;
+        }
+    }
+    [data-dpr="2"]{
+        .left{font-size: 32px}
+        .header{
+            i,.iconfont{font-size:36px;}
+            font-size:36px;
+        }
+    }
+    [data-dpr="3"]{
+        .left{font-size: 48px}
+        .header{
+            i,.iconfont{font-size:54px;}
+            font-size:54px;
+        }
+    }
     .header{
         background:linear-gradient(to bottom, #303036, #3c3b40);
         color:#efefef;
-        line-height:46px;
-        height:46px;
+        line-height:92px;
+        height:92px;
         display:flex;
         align-items:center;
         padding:0 15px;
-        i,.iconfont{font-size:18px;}
-        font-size:18px;
         transform:rotate(0)
     }
     .left{
         text-align:left;
-        font-size:16px;
     }
     .right{text-align:right;}
     .left,.right{width:80px;overflow:hidden;word-wrap:break-word;}
