@@ -71,10 +71,10 @@ export default {
         padding:0;
         background-color:#fff;
         height:46px;
-        line-height:46px;
+        line-height:1;
         display:flex;
         align-items:center;
-        .iconfont{font-size:30px;line-height:40px;color:#7d7e83;padding:0 5px;}
+        .iconfont{font-size:dpr(30px);line-height:(40/30);color:#7d7e83;padding:0 5px;}
     }
     .chat-way{flex:1}
     .input{
@@ -83,20 +83,20 @@ export default {
         border:1px solid #bdbdbd;
         border-radius:3px;
         padding:6px 5px;
-        font-size:16px;
+        font-size:dpr(16px);
     }
     .voicebar{
         color:#878787;
         border:1px solid #bdbdbd;
         border-radius:3px;
         width:100%;
-        line-height:32px;
+        line-height:dpr(32px);
         text-align:center;
     }
     .voicewrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
                background-color:#78787B;border-radius:4px;padding:20px 15px 0;color:#fff;text-align:center}
     .voice-inner{display:flex;justify-content:center}
-    .fa{font-size:50px;margin-right:5px;}
+    .fa{font-size:dpr(50px);margin-right:5px;}
     .voice-volume{
         display:flex;
         flex-direction:column;

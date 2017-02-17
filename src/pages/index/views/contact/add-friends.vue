@@ -91,24 +91,24 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-   .list{margin-top:22px;font-size:17px;}
+   .list{margin-top:22px;font-size:dpr(17px);}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:35px;height:35px;margin-right:15px}
    .item-info{flex:1;line-height:1.41}
-   .item-other{font-size:22px;color:#c8c8cd}
-   .title{font-size:15px;}
-   .desc{font-size:12px;color:#b7b7b7;}
+   .item-other{font-size:dpr(22px);color:#c8c8cd}
+   .title{font-size:dpr(15px);}
+   .desc{font-size:dpr(12px);color:#b7b7b7;}
    .input{
         width:100%;
         padding:10px 30px;background:#fff;margin-top:20px;
         border-top: 1px solid #d9d9d9;
         border-bottom: 1px solid #d9d9d9;
         .iconfont{color: #40b938;}
-        input{border:0;width:80%;padding:5px 4px;font-size:16px;vertical-align:middle}
+        input{border:0;width:80%;padding:5px 4px;font-size:dpr(16px);vertical-align:middle}
    }
-   .weixin{margin-top:10px;text-align:center;font-size:17px}
+   .weixin{margin-top:10px;text-align:center;font-size:dpr(17px)}
    .img{width:24px;height:24px;display:inline-block;}
    :global(.imgHolder img){vertical-align: middle;}
 </style>

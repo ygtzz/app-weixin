@@ -113,6 +113,6 @@ export default {
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:20px;height:20px;margin-right:10px}
-   .item-info{font-size:17px;flex:1}
-   .item-other{font-size:22px;color:#c8c8cd}
+   .item-info{font-size:dpr(17px);flex:1}
+   .item-other{font-size:dpr(22px);color:#c8c8cd}
 </style>

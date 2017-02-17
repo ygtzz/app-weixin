@@ -66,39 +66,21 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-    [data-dpr="1"]{
-        .left{font-size: 16px}
-        .header{
-            i,.iconfont{font-size:18px;}
-            font-size:18px;
-        }
-    }
-    [data-dpr="2"]{
-        .left{font-size: 32px}
-        .header{
-            i,.iconfont{font-size:36px;}
-            font-size:36px;
-        }
-    }
-    [data-dpr="3"]{
-        .left{font-size: 48px}
-        .header{
-            i,.iconfont{font-size:54px;}
-            font-size:54px;
-        }
-    }
     .header{
         background:linear-gradient(to bottom, #303036, #3c3b40);
         color:#efefef;
-        line-height:92px;
-        height:92px;
+        line-height:1;
+        height:46px;
         display:flex;
         align-items:center;
         padding:0 15px;
-        transform:rotate(0)
+        transform:rotate(0);
+        i,.iconfont{font-size:dpr(18px);}
+        font-size:dpr(18px);
     }
     .left{
         text-align:left;
+        font-size: dpr(16px);
     }
     .right{text-align:right;}
     .left,.right{width:80px;overflow:hidden;word-wrap:break-word;}

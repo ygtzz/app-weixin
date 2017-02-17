@@ -63,11 +63,11 @@ export default {
     .left{
         padding:3px 10px;
         border-right:1px solid #dbdbdb;
-        .iconfont{font-size:30px;line-height:42px;color:#7d7e83;}
+        .iconfont{font-size:dpr(30px);line-height:(42/30);color:#7d7e83;}
     }
     .right{flex:1}
     .list{display:flex;height:100%;}
-    .item{flex:1;font-size:16px;text-align:center;height:100%;display:flex;align-items:center;justify-content:center;
+    .item{flex:1;font-size:dpr(16px);text-align:center;height:100%;display:flex;align-items:center;justify-content:center;
         &:not(:last-child){border-right:1px solid #dadada}
     }
 </style>

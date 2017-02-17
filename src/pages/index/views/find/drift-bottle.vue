@@ -40,7 +40,7 @@ export default {
    .footer{width:100%;text-align:center;background:url(/static/images/drift-bottle/bottle-board.png);background-size:contain;background-repeat:no-repeat;background-position:left bottom;}
    .item{text-align:center;display:inline-block;&:not(:last-child){margin-right:50px;}}
    .img{width:70px;height:70px;background-size:cover}
-   .desc{margin-top:10px;color:#fff;font-size:16px;line-height:1.6}
+   .desc{margin-top:10px;color:#fff;font-size:dpr(16px);line-height:1.6}
    .drift{
         background-image:url(/static/images/drift-bottle/bottle-button-throw.png);
    }

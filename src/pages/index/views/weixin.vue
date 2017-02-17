@@ -62,7 +62,6 @@ export default {
             'delete_news'
         ]),
         fChatItemClick(item){
-            console.log(item)
             this.set_chat(item);
             this.$router.push({name:'chatroom'});
         },
@@ -107,9 +106,9 @@ export default {
     .item{display:flex;padding:4px 5px;background-color:#fff;border-bottom:1px solid #dbdbdb;}
     .item-img{width:50px;height:50px;}
     .item-info{flex:1;margin-left:8px}
-    .info-title{font-size:18px;line-height:25px;}
-    .info-msg{font-szie:14px;line-height:23px;color:#888}
+    .info-title{font-size:dpr(18px);line-height:(25/18);}
+    .info-msg{font-szie:dpr(14px);line-height:(23/14);color:#888}
     .item-other{color:#b2b2b2;text-align:right}
-    .other-time{line-height:25px}
+    .other-time{line-height:dpr(25px)}
     :global(.imgHolder img){border-radius:4px} 
 </style>

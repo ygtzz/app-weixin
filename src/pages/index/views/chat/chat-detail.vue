@@ -141,14 +141,14 @@ export default {
               background:#fff;padding:15px;
               .item{width:55px;}}
     .user-name{text-align:center;}
-    .jia{border:1px solid #ccc;width:55px;height:55px;text-align:center;line-height:55px;border-radius:4px;
-    .iconfont{font-size:40px;color:#ccc}}
+    .jia{border:1px solid #ccc;width:55px;height:55px;text-align:center;line-height:1;border-radius:4px;
+    .iconfont{font-size:dpr(40px);color:#ccc}}
     :global(.imgHolder img){border-radius:4px}
     .list{margin-top:22px}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:55px;height:75px;margin-right:5px}
-   .item-info{font-size:17px;flex:1}
-   .item-other{font-size:22px;color:#c8c8cd}
+   .item-info{font-size:dpr(17px);flex:1}
+   .item-other{font-size:dpr(22px);color:#c8c8cd}
 </style>

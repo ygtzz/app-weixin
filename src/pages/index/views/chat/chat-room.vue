@@ -81,6 +81,6 @@ export default {
 <style lang="sass" scoped>
     .con{display:flex;flex-direction:column}
     .body{flex:1}
-    .member{font-size:18px;}
-    .icon-mute{font-size: 12px !important;color:#878689;}
+    .member{font-size:dpr(18px);}
+    .icon-mute{font-size:dpr(12px) !important;color:#878689;}
 </style>

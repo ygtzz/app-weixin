@@ -76,17 +76,17 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-   .list{margin-top:22px;font-size:17px;}
+   .list{margin-top:22px;font-size:dpr(17px);}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;line-height:1.4}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:40px;height:40px;margin-right:15px}
    .item-info{flex:1;}
-   .item-other{font-size:18px;color:#9e9e9e}
-   .title{font-size:18px}
-   .desc{font-size:12px;color:#9e9e9e}
-   .btn{border:0;box-shadow:none;font-size:12px;}
+   .item-other{font-size:dpr(18px);color:#9e9e9e}
+   .title{font-size:dpr(18px)}
+   .desc{font-size:dpr(12px);color:#9e9e9e}
+   .btn{border:0;box-shadow:none;font-size:dpr(12px);}
    .contact{text-align:center;background:#fff;padding:15px;}
-   .contact-img{.iconfont{font-size: 35px;color: #4bb94b;}}
-   .contact-desc{font-size: 14px;color: #929292;margin-top:5px;}
+   .contact-img{.iconfont{font-size: dpr(35px);color: #4bb94b;}}
+   .contact-desc{font-size: dpr(14px);color: #929292;margin-top:5px;}
 </style>

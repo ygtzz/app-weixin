@@ -72,16 +72,16 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-   .list{margin-top:22px;font-size:17px;}
+   .list{margin-top:22px;font-size:dpr(17px);}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:20px;height:20px;margin-right:15px}
    .item-info{flex:1;}
-   .item-other{font-size:22px;color:#c8c8cd}
+   .item-other{font-size:dpr(22px);color:#c8c8cd}
    .item_head{
        .item-img{width:60px;height:60px;}
-       .item-info{font-size: 14px;color: #888;line-height:1.4;}
+       .item-info{font-size: dpr(14px);color: #888;line-height:1.4;}
        :global(.imgHolder img){border-radius:4px;border: 1px solid #ccc}   
    }
    .photo{padding:20px 0;}
@@ -95,5 +95,5 @@ export default {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;}
-    .title{font-size:18px;}
+    .title{font-size:dpr(18px);}
 </style>

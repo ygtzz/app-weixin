@@ -45,12 +45,12 @@ export default {
 <style lang="sass" scoped>
    .c{height:100%;overflow:hidden;display:flex;flex-direction:column}
    .body{flex:1;overflow:auto;}
-   .list{font-size:17px;}
+   .list{font-size:dpr(17px);}
    .item{padding:0 15px;background-color:#fff;}
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:35px;height:35px;margin-right:15px}
    .item-info{flex:1;line-height:1.41}
-   .item-other{font-size:22px;color:#c8c8cd}
+   .item-other{font-size:dpr(22px);color:#c8c8cd}
    :global(.imgHolder img){vertical-align: middle;}
 </style>

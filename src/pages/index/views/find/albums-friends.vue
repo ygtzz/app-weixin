@@ -46,9 +46,9 @@ export default {
    .person{position:absolute;bottom:-22px;width:100%;display:flex;justify-content:flex-end;box-sizing:border-box;padding-right:15px;}
    .img{width:70px;height:70px;background-size:cover;
         background-image:url(//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg);
-        border:2px solid #fff;
+        border:dpr(2px) solid #fff;
    }
-   .name{margin-top:10px;margin-right:20px;color:#fff;font-size:22px;;line-height:1.6}
+   .name{margin-top:10px;margin-right:20px;color:#fff;font-size:dpr(22px);;line-height:1.6}
    .drag-icon{width:30px;height:30px;background: url(/static/images/find-album-reflash-icon.png) no-repeat 0 0;
         background-size: cover;
         position: absolute;

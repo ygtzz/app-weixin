@@ -71,13 +71,14 @@ export default {
     .header{
         background:linear-gradient(to bottom, #303036, #3c3b40);
         color:#efefef;
-        line-height:92px;
-        height:92px;/*px*/
+        line-height:1;
+        height:46px;
         text-align:center;
     }
-    .tips-menu{position:absolute;width:120px;right:5px;top:53px;padding:2px 10px;background-color:#49484b;
-        color:#fff;font-size:16px;line-height:1.6;text-align:left;transition:all .2s ease;}
-    .tips-menu:before{width:0;height:0;position:absolute;top:-8px;right:15px;content:"";border-width:0 6px 8px;border-color:rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #49484b rgba(0, 0, 0, 0);border-style:solid;}
+    .tips-menu{position:absolute;width:100px;right:5px;top:53px;padding:2px 10px;background-color:#49484b;
+        color:#fff;font-size:dpr(16px);line-height:2;text-align:left;transition:all .2s ease;}
+    .tips-menu:before{width:0;height:0;position:absolute;top:-8px;right:15px;content:"";border-width:0 dpr(6px) dpr(8px);
+        border-color:rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #49484b rgba(0, 0, 0, 0);border-style:solid;}
     .tip-item:not(:last-child){border-bottom:1px solid #5b5b5d;}
     .tip-item i{margin-right:15px}
     .tips-close{opacity:0;transform:scale(.7);transform-origin:90% 0;}

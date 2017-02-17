@@ -85,6 +85,6 @@ export default {
    .item-i{padding:9px 0;display:flex;align-items:center;}
    .item:not(:last-child) .item-i{border-bottom:1px solid #ECECEC;}
    .item-img{width:36px;height:36px;margin-right:10px}
-   .item-info{font-size:17px} 
+   .item-info{font-size:dpr(17px)} 
    .contact-alpha{padding-left:15px;color:#888}
 </style>

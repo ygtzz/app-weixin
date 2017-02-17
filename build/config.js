@@ -31,10 +31,10 @@ module.exports = {
     enableRem:true,
     // postcss-plugin-px2rem 的配置，详细描述参考：https://github.com/ant-tool/postcss-plugin-px2rem
     px2remOptions: {
-        rootValue: 750 / 16,
+        rootValue: 750 / 32,
         unitPrecision: 5,
         propWhiteList: [],
-        propBlackList: ['font-size','border-top','border-bottom','border'],
+        propBlackList: ['font-size','border'],
         selectorBlackList: ['ignore'],
         ignoreIdentifier: false,
         replace: true,
