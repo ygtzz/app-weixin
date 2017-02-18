@@ -39,7 +39,7 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-   .c{color:#979797;background-color: #2d3031;display:flex;flex-direction:column}
+   .c{color:#979797;background-color:#2d3031;display:flex;flex-direction:column}
    .body{flex:1;display:flex;align-items:center;justify-content:center}
    .footer{padding-bottom:30px;text-align:center}
    .item{text-align:center;display:inline-block;&:not(:last-child){margin-right:50px;}}
