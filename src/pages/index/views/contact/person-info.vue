@@ -7,12 +7,12 @@
             <li class="item item_head">
                 <div class="item-i">
                     <div class="item-img">
-                        <c-imgHolder src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
+                        <c-imgHolder :src="person_info.base.iconSrc"></c-imgHolder>
                     </div>
                     <div class="item-info">
-                        <p class="title">阿涛<span class="gender gender-man"></span></p>
-                        <p class="desc">微信号：wxid_yangtao</p>
-                        <p class="nick">杨涛</p>
+                        <p class="title" v-text="person_info.base.remark"><span class="gender gender-man"></span></p>
+                        <p class="desc">微信号：{{person_info.base.wxid}}</p>
+                        <p class="nick" v-text="person_info.base.nickname">杨涛</p>
                     </div>
                 </div>
             </li>
@@ -56,6 +56,7 @@
     </div>
 </template>
 <script>
+import {mapGetters} from 'vuex';
 
 export default {
     name:'c-person-info',
@@ -68,6 +69,11 @@ export default {
                 nextIcon:'icon-more'
             }           
         }
+    },
+    computed:{
+        ...mapGetters([
+            'person_info'
+        ])
     }
 }
 </script>
