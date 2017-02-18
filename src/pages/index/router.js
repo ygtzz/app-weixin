@@ -14,6 +14,7 @@ import groupChat from './views/contact/group-chat.vue';
 import yaoyiyao from './views/find/yao-yi-yao.vue';
 import driftBottle from './views/find/drift-bottle.vue';
 import albumsFriends from './views/find/albums-friends.vue';
+import saoYiSao from './views/find/sao-yi-sao.vue';
 
 export default [
     { path: '/', component: weixin },
@@ -55,7 +56,8 @@ export default [
       children:[
           { path: 'yao-yi-yao', component: yaoyiyao,name:'yao-yi-yao'},
           { path: 'drift-bottle', component: driftBottle,name:'drift-bottle'},
-          { path: 'albums-friends', component: albumsFriends,name:'albums-friends'}                              
+          { path: 'albums-friends', component: albumsFriends,name:'albums-friends'},
+          { path: 'sao-yi-sao', component: saoYiSao,name:'sao-yi-sao'}                                                                      
       ]
     },
     { path: '/me', component: me,name:'me'}

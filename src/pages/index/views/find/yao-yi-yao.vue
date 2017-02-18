@@ -28,7 +28,7 @@ export default {
                 {text:'歌曲',cls:'song'},
                 {text:'电视',cls:'tv'}
             ],
-            activeFootItem:''    
+            activeFootItem:'person'    
         }
     },
     methods:{

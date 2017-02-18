@@ -19,7 +19,7 @@
         </ul>
         <ul class="list">
             <li class="item">
-                <router-link :to="{name:'yao-yi-yao'}">
+                <router-link :to="{name:'sao-yi-sao'}">
                     <div class="item-i">
                         <div class="item-img">
                             <c-imgHolder src="static/images/find_icon-qrcode.png"></c-imgHolder>
