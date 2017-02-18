@@ -67,7 +67,7 @@
             </li>
         </ul>
         <ul class="list">
-            <li class="item">
+            <li class="item" @click="fShopingClick">
                 <div class="item-i">
                     <div class="item-img">
                         <c-imgHolder src="static/images/find_icon-shopping.png"></c-imgHolder>
@@ -100,8 +100,20 @@
     </div>
 </template>
 <script>
+import {mapActions} from 'vuex';
+
 export default {
-    name:'c-find'
+    name:'c-find',
+    methods:{
+        ...mapActions([
+            'set_iframe_url'
+        ]),
+        fShopingClick(){
+            this.set_iframe_url({title:"京东购物",url:'//wqs.jd.com'}).then(()=>{
+                this.$router.push({path:'/find/shoping'})
+            });
+        }
+    }
 }
 </script>
 <style lang="sass" scoped>

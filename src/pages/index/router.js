@@ -5,7 +5,7 @@ import me from './views/me.vue';
 import chatroom from './views/chat/chat-room.vue';
 import chatdetail from './views/chat/chat-detail.vue';
 import chatinfo from './views/chat/chat-info.vue';
-import link from './widget/iframe.vue';
+import iframe from './widget/iframe.vue';
 import personInfo from './views/contact/person-info.vue';
 import personInfoSet from './views/contact/person-info-set.vue';
 import newFriends from './views/contact/new-friends.vue';
@@ -25,7 +25,7 @@ export default [
               children:[
                   {path:'chat-detail',component:chatdetail,name:'chatdetail'},
                   {path:'chat-info',component:chatinfo,name:'chatinfo'},
-                  {path:'link',component:link,name:'link'}
+                  {path:'iframe',component:iframe,name:'iframe'}
               ]
           }
       ]
@@ -57,7 +57,8 @@ export default [
           { path: 'yao-yi-yao', component: yaoyiyao,name:'yao-yi-yao'},
           { path: 'drift-bottle', component: driftBottle,name:'drift-bottle'},
           { path: 'albums-friends', component: albumsFriends,name:'albums-friends'},
-          { path: 'sao-yi-sao', component: saoYiSao,name:'sao-yi-sao'}                                                                      
+          { path: 'sao-yi-sao', component: saoYiSao,name:'sao-yi-sao'},
+          { path:'shoping',component:iframe,name:'shoping'}                                                                      
       ]
     },
     { path: '/me', component: me,name:'me'}
