@@ -25,7 +25,7 @@ export default [
               children:[
                   {path:'chat-detail',component:chatdetail,name:'chatdetail'},
                   {path:'chat-info',component:chatinfo,name:'chatinfo'},
-                  {path:'iframe',component:iframe,name:'iframe'}
+                  {path:'link',component:iframe,name:'iframe'}
               ]
           }
       ]

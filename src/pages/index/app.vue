@@ -39,7 +39,6 @@ export default {
         setTimeout(function(){
             self.bShowWelcome = false;
         },2000);
-        console.log(this.fIsMobile())
         this.bPc = !this.fIsMobile();
     },
     data(){

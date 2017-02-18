@@ -6,7 +6,7 @@
             <div class="banner-wrap">
                 <div class="banner" :style="bannerPosition" @touchstart="fBannerStart" @touchmove="fBannerMove" @touchend="fBannerEnd" @touchcancel="fBannerEnd">
                     <div class="person">
-                        <div class="name">yangtao</div>
+                        <div class="name">mengwei</div>
                         <div class="img"></div>
                     </div>
                 </div>

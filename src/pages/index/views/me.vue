@@ -7,8 +7,8 @@
                         <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
                     </div>
                     <div class="item-info">
-                        <p class="title">yangtao</p>
-                        <p class="desc">微信号：wxid_yangtao</p>
+                        <p class="title">mengwei</p>
+                        <p class="desc">微信号：wxid_mengwei</p>
                     </div>
                     <div class="item-other">
                         <c-imgHolder class="qr" src="static/images/chat-info-qr.png"></c-imgHolder>

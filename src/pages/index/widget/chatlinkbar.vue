@@ -6,7 +6,7 @@
                     <div class="iconfont icon-dialogue-bar-jianpan"></div>
                 </div>
                 <div class="right">
-                    <ul class="list">
+                    <ul class="list">{{item}}
                         <li class="item" v-for="item in aMenu" @click="fLinkClick(item)">{{item.title}}</li>
                     </ul>
                 </div>

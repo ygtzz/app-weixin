@@ -39,7 +39,7 @@ module.exports = {
     "chatPrevivw": {
         "newsUnreadCount": 11, //未读
         "endTimeStr": 1472632586443,
-        "endChatAuth": "杨涛",
+        "endChatAuth": "威哥",
         "endChatTxt": "晚上打球",
         "chatBackground": null, //聊天背景
         "newsMute": false

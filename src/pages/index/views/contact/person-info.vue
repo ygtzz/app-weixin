@@ -12,7 +12,7 @@
                     <div class="item-info">
                         <p class="title" v-text="person_info.base.remark"><span class="gender gender-man"></span></p>
                         <p class="desc">微信号：{{person_info.base.wxid}}</p>
-                        <p class="nick" v-text="person_info.base.nickname">杨涛</p>
+                        <p class="nick" v-text="person_info.base.nickname"></p>
                     </div>
                 </div>
             </li>
