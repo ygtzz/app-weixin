@@ -22,13 +22,13 @@
 module.exports = {
     "base": {
         "id": 1,
-        "nickname": "孟威",
-        "remark":"孟威",
+        "nickname": "weige",
+        "remark":"weige",
         "wxid": "wxid_mengwei",
         "qq": "00001",
         "email": "00001@qq.com",
         "type": "firends",
-        "iconSrc": "//images2015.cnblogs.com/blog/528573/201609/528573-20160922181803449-1753077357.jpg",
+        "iconSrc": "http://oi7sxakwb.bkt.clouddn.com/%E5%BE%97%E4%B9%8B%E6%88%91%E5%B9%B8.jpg",
         "qrCode": "",
         "telphone":18210808376,
         "signature": "个性签名",
@@ -38,7 +38,7 @@ module.exports = {
     "chatPrevivw": {
         "newsUnreadCount": 1, //未读
         "endTimeStr": 1472632586443,
-        "endChatAuth": "孟威",
+        "endChatAuth": "weige",
         "endChatTxt": "出去走走",
         "chatBackground": null, //聊天背景
         "newsMute": false

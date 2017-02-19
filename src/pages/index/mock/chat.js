@@ -1,14 +1,14 @@
 var list = [{
     "base": {
         "id": 1,
-        "name": "孟威",
-        "nickname": "nick_孟威",
-        "remark": "remark_孟威",
+        "name": "weige",
+        "nickname": "nick_weige",
+        "remark": "remark_weige",
         "wxid": "wxid_yangtao",
         "qq": "00001",
         "email": "00001@qq.com",
         "type": "friends",
-        "iconSrc": "//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg",
+        "iconSrc": "http://oi7sxakwb.bkt.clouddn.com/%E5%BE%97%E4%B9%8B%E6%88%91%E5%B9%B8.jpg",
         "qrCode": "",
         "signature": "个性签名",
         "telphone": 18812345678,
@@ -19,7 +19,7 @@ var list = [{
     "chatBaseModel": {
         "newsUnreadCount": 1,
         "endTimeStr": 1472632586443,
-        "endChatAuth": "孟威",
+        "endChatAuth": "weige",
         "endChatTxt": "晚上打球?",
     },
     //对话框底部菜单
@@ -29,10 +29,10 @@ var list = [{
     "chatDialogueModel": [],
     "chatMemberModel": [{
         "id": 1,
-        "iconSrc": "//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg",
-        "name": "孟威",
-        "nickname": "nick_孟威",
-        "remark": "remark_孟威",
+        "iconSrc": "http://oi7sxakwb.bkt.clouddn.com/%E5%BE%97%E4%B9%8B%E6%88%91%E5%B9%B8.jpg",
+        "name": "weige",
+        "nickname": "nick_weige",
+        "remark": "remark_weige",
     }],
     "chatConfigModel": {
         "isStick": false, //置顶

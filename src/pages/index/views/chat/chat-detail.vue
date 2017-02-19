@@ -8,7 +8,7 @@
             <ul class="userlist">
                 <li class="item">
                     <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg"></c-imgHolder>
-                    <p class="user-name">孟威</p>
+                    <p class="user-name">weige</p>
                 </li>
                 <li class="item">
                     <div class="jia"><span class="iconfont icon-chat-detail-add"></span></div>

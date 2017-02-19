@@ -22,16 +22,16 @@
 module.exports = {
     "base": {
         "id": 11,
-        "name":"小明",
-        "nickname": "小明",
-        "remark":"小明",
-        "wxid": "wxid_xiaoming",
+        "name":"小建",
+        "nickname": "小建",
+        "remark":"小建",
+        "wxid": "wxid_xiaojian",
         "qq": "000011",
         "email": "00002@qq.com",
         "type": "firends",
         "iconSrc": "//images2015.cnblogs.com/blog/528573/201609/528573-20160925131419593-1613633261.jpg",
         "qrCode": "",
-        "telphone":18812345678,
+        "telphone":'xxxxxxxxx',
         "signature": "个性签名",
         "area":["中国","北京","海淀"],
         "selfPhotos":[{imgSrc:""}]
@@ -40,7 +40,7 @@ module.exports = {
         "newsUnreadCount": 11, //未读
         "endTimeStr": 1472632586443,
         "endChatAuth": "威哥",
-        "endChatTxt": "晚上打球",
+        "endChatTxt": "出去走走",
         "chatBackground": null, //聊天背景
         "newsMute": false
     }

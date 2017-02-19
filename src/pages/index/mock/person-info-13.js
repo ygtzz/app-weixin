@@ -22,10 +22,10 @@
 module.exports = {
     "base": {
         "id": 11,
-        "name":"小亮",
-        "nickname": "小亮",
-        "remark":"小亮",
-        "wxid": "wxid_xiaoliang",
+        "name":"小白",
+        "nickname": "小白",
+        "remark":"小白",
+        "wxid": "wxid_xiaobai",
         "qq": "00000",
         "email": "00000@qq.com",
         "type": "firends",

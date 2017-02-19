@@ -22,16 +22,16 @@
 module.exports = {
     "base": {
         "id": 1,
-        "name": "孟威",
-        "nickname": "孟威",
+        "name": "weige",
+        "nickname": "weige",
         "remark":"weige",
         "wxid": "wxid_mengwei",
         "qq": "00001",
         "email": "00001@qq.com",
         "type": "firends",
-        "iconSrc": "//images2015.cnblogs.com/blog/528573/201609/528573-20160925131410373-516492873.jpg",
+        "iconSrc": "http://oi7sxakwb.bkt.clouddn.com/%E5%BE%97%E4%B9%8B%E6%88%91%E5%B9%B8.jpg",
         "qrCode": "",
-        "telphone":18812345678,
+        "telphone":'xxxxxxx',
         "signature": "个性签名",
         "area":["中国","北京","海淀"],
         "selfPhotos":[{imgSrc:""}]
@@ -39,8 +39,8 @@ module.exports = {
     "chatPrevivw": {
         "newsUnreadCount": 1, //未读
         "endTimeStr": 1472632586443,
-        "endChatAuth": "孟威",
-        "endChatTxt": "晚上打球",
+        "endChatAuth": "weige",
+        "endChatTxt": "出去走走",
         "chatBackground": null, //聊天背景
         "newsMute": false
     }

@@ -4,11 +4,11 @@
             <li class="item item_head">
                 <div class="item-i">
                     <div class="item-img">
-                        <c-imgHolder imgClass="head-img" src="//images2015.cnblogs.com/blog/528573/201609/528573-20160925223248967-1344840692.jpg"></c-imgHolder>
+                        <c-imgHolder imgClass="head-img" src="http://oi7sxakwb.bkt.clouddn.com/%E5%BE%97%E4%B9%8B%E6%88%91%E5%B9%B8.jpg"></c-imgHolder>
                     </div>
                     <div class="item-info">
-                        <p class="title">mengwei</p>
-                        <p class="desc">微信号：wxid_mengwei</p>
+                        <p class="title">weige</p>
+                        <p class="desc">微信号：wxid_weige</p>
                     </div>
                     <div class="item-other">
                         <c-imgHolder class="qr" src="static/images/chat-info-qr.png"></c-imgHolder>
