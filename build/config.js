@@ -30,6 +30,7 @@ module.exports = {
     baseSize:16,
     enableRem:true,
     // postcss-plugin-px2rem 的配置，详细描述参考：https://github.com/ant-tool/postcss-plugin-px2rem
+    // 要修改源码index.js的propBlackList配置，使用===代替indexOf
     px2remOptions: {
         rootValue: 750 / 32,
         unitPrecision: 5,
