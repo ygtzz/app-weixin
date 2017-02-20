@@ -1,11 +1,11 @@
 # app-weixin
 模仿微信app
 
-##start
+## start
 ```javascript
 yarn install
 //dev
 yarn start
 //release
-yarn run release 
+yarn run release
 ```
