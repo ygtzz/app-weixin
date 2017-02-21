@@ -20,7 +20,7 @@ var list = [{
         "newsUnreadCount": 1,
         "endTimeStr": 1472632586443,
         "endChatAuth": "weige",
-        "endChatTxt": "晚上打球?",
+        "endChatTxt": "出去走走?",
     },
     //对话框底部菜单
     "chatDialogueBarModel": {
