@@ -15,9 +15,11 @@ import yaoyiyao from './views/find/yao-yi-yao.vue';
 import driftBottle from './views/find/drift-bottle.vue';
 import albumsFriends from './views/find/albums-friends.vue';
 import saoYiSao from './views/find/sao-yi-sao.vue';
+import test from './views/test.vue';
 
 export default [
     { path: '/', component: weixin },
+    { path: '/test',component: test, name:'test'},
     { path: '/weixin', component: weixin, name:'weixin',
       children:[
           {
